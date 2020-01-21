@@ -1,0 +1,507 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overscroll-behavior: none;
+}
+
+@font-face {
+    font-family: Circular Std;
+    src: url('./fonts/CircularStd-Book.otf');
+}
+
+@font-face {
+    font-family: Schnyder L Demi;
+    src: url('./fonts/Schnyder-L-Demi.otf');
+}
+
+@font-face {
+    font-family: Berthold Akzidenz Grotesk BE;
+    src: url('./fonts/Berthold-Akzidenz-Grotesk-BE-Regular.otf');
+}
+
+@font-face {
+    font-family: Schnyder S Demi;
+    src: url('./fonts/Schnyder-S-Demi.otf');
+}
+
+body {
+    background: #F6F5F5;
+}
+
+html {
+    cursor: hidden;	
+}
+
+/* loader */
+
+#loader {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#loader.hidden {
+    display: none;
+    animation: fadeOut 1s; 
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+/* Nav bar */
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 4;
+}
+
+nav {
+    position: relative;
+    width: 100vw;
+    height: 141px;
+    left: 0px;
+    top: 0px;
+    text-align: center;
+}
+
+nav a {
+    display: block;
+    font-size: 36px;
+    font-family: Circular Std;
+    text-decoration: none;
+    color: black;
+    cursor: none;
+}
+
+nav span {
+    font-size: 16px;
+    display: block;
+}
+
+nav a:hover {
+    text-shadow: -14px 16px 0.5px white, -28px 32px 0 black;
+    color: #D8553B; 
+}
+
+nav a:hover span {
+    display: none;
+}
+
+nav li {
+    list-style: none;
+}
+
+#anim {
+    width: 100%;
+}
+
+a.green-mode {
+    color: white;
+}
+
+
+.work {
+    position: absolute;
+    left: 64px;
+    top: 30px;
+}
+
+.about {
+    position: absolute;
+    left: 230px;
+    top: 30px;
+}
+
+.lab {
+    position: absolute;
+    left: 1054px;
+    top: 30px;
+}
+
+.contact {
+    position: absolute;
+    left: 1226px;
+    top: 30px;
+}
+
+.home-link {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    font-family: Berthold;
+    font-size: 16px;
+}
+
+/* status bar */
+#bar-holder {
+    position: fixed;
+    height: 100%;
+    width: 8px;
+    z-index: 6;
+}
+
+#status-bar {
+    width: 7px;
+    left: 0px;
+    top: 0px;
+    background: #BDF166;
+}
+
+/* cursor */
+
+.cursor {
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    transition-duration: 400ms;
+    transition-timing-function: ease-out;
+    transform: translate(-50%, -50%);
+    /* z-index: 100; */
+}
+
+/* footer */
+
+footer {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+footer a {
+    margin: 0 40px;
+    font-family: Schnyder S Demi;
+    text-decoration: none;
+    display: inline-block;
+    color:black;
+}
+
+.homepage {
+    position: relative;
+    display: block;
+    height: 100vh;
+}
+
+.homepage.green-mode {
+    background-color: #24562B;
+}
+
+.home-line {
+    border-bottom: 1px solid #000000;
+    transform: rotate(90deg);
+    position: absolute;
+    margin-top: 20%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 540px;
+    top: 52%;
+    /* z-index: 1; */
+}
+
+.home-line.green-mode {
+    border-bottom: 1px solid white;
+    transform: rotate(90deg);
+    position: absolute;
+    margin-top: 20%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 540px;
+    top: 52%;
+    z-index: 0;
+}
+
+.logo {
+    font-family: Schnyder L Demi;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 200px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    top: 100px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: block;
+    position: absolute;
+    z-index: 2;
+}
+
+.demo {
+    width: 346px;
+    height: 440px;
+    top: 207px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 1;
+}
+
+.demo:hover {
+    z-index: 3;
+}
+
+button {
+    text-decoration: none;
+    border: none;
+    background: none;
+}
+
+.light {
+    position: absolute;
+    left: 222px;
+    top: 673px;
+    font-family: Circular Std;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 25px;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    padding: 15px;
+    transition: ease-in 0.4s;
+    border-radius: 64% 36% 27% 73% / 55% 58% 42% 45%;
+
+}
+
+.green {
+    position: absolute;
+    left: 1058px;
+    top: 673px;
+    font-family: Circular Std;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 25px;
+    align-items: center;
+    text-align: center;
+    color: #24562B;
+    padding: 15px;
+    transition: ease-in 0.4s;
+    border-radius: 64% 36% 27% 73% / 55% 58% 42% 45%;
+
+}
+
+.light:hover {
+    background-color: black;
+    color: white;
+    animation: blob 5s linear infinite;
+    transition: ease-out 0.5s;
+}
+
+
+.green:hover {
+    background-color: black;
+    animation: blob 5s linear infinite;
+    transition: ease-out 0.5s;
+    
+}
+
+.light.green-mode {
+    color: white;
+}
+
+.green.green-mode {
+    color: white;
+}
+
+@keyframes blob {
+    0%, 100% {
+        border-radius: 24% 36% 27% 23% / 45% 38% 42% 45%;
+    }
+    25% {
+        border-radius: 44% 56% 37% 23% / 45% 18% 52% 55%;
+    }
+    50% {
+        border-radius: 49% 56% 17% 21% / 42% 19% 22% 26%;
+    }
+    75% {
+        border-radius: 22% 36% 50% 44% / 19% 38% 22% 50%;
+    }
+}
+
+/* main services */
+
+.main-services {
+    display: block;
+    height: 100vh;
+}
+
+.main-services h3 {
+    text-align: center;
+    font-family: Berthold Akzidenz Grotesk BE;
+    font-style: Condensed;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #000000;
+}
+/* work examples */
+.case-header {
+    padding-bottom: 25px;
+    text-align: center;
+    font-family: Berthold Akzidenz Grotesk BE;
+    font-style: Condensed;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.cases {
+    display: block;
+}
+
+.case {
+    display: block;
+    height: 900px;
+    widows: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    flex: 1;
+}
+.case:nth-child(odd) .left {
+    background-color:  #FFF1EE;
+}
+
+.case-title {
+    font-family: Schnyder S Demi;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 60px;
+    text-align: left;
+    padding-top: 20%;
+    padding-left: 20%;
+}
+
+.case-subtitle {
+    text-align: left;
+    padding-top: 5%;
+    padding-left: 20%;
+}
+
+.case-blurb {
+    width: 60%;
+    text-align: left;
+    margin: 0 auto;
+    padding-top: 20%;
+}
+
+.right {
+    width: 50%;
+    background-color: #E5E5E5;
+}
+
+.case:nth-child(odd) .right {
+    background-color: #D8553B;
+}
+
+.case-picture-right {
+    display: block;
+    width: 404.56px;
+    height: 539.41px;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    left: 0;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.left {
+    width: 50%;
+    position: relative;
+}
+
+.case-picture-left {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 30%;
+    background-size: cover;
+}
+
+
+/* .case-picture-left.one {
+    background-image: url('./Images/Laura-Butler-by-Iringo-Demeter-for-BEAR-x-Cereal-Magazine-14.jpg');
+} */
+
+/* .case-picture-left.two {
+    background-image: url('./Images/pexels-2969926.jpg');
+} */
+
+/* more */
+
+.more {
+    display: block;
+    height: 100vh;
+}
+
+.more-header {
+    text-align: center;
+    font-family: Circular Std;
+    font-size: 102px;
+    color: #000000;
+    padding-top: 15%;
+}
+
+.more-line {
+    border-bottom: 0.5px solid #000000;
+    width: 845px;
+    margin: 0 auto;
+}
+
+/* contact */
+
+.contact-section {
+    background-color: #FFF1EE;
+    display: block;
+    height: 100vh;
+}
+
+.contact-section p {
+    font-family: Schnyder L Demi;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 102px;
+    text-align: left;
+    padding-top: 10%;
+    padding-left: 5%;
+}
+
+.email {
+    color: #BDF166;
+}
+
+.collaborations {
+    font-family: Berthold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 92px;
+    text-transform: uppercase;
+}
