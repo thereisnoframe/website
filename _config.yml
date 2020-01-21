@@ -1,5 +1,5 @@
-url: "https://benlardie.github.io/noframe-jekyll/" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "/" # the subpath of your site, e.g. /blog
-title: "NoFrame" # the name of your site, e.g. ACME Corp.
+url: https://benlardie.github.io/noframe-jekyll/
+baseurl: /
+title: NoFrame 
 collections:
   cases:
