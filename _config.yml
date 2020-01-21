@@ -1,5 +1,5 @@
-url: https://benlardie.github.io/noframe-jekyll
-baseurl: /
+url: https://benlardie.github.io
+baseurl: /noframe-jekyll
 title: NoFrame 
 collections:
   cases:
