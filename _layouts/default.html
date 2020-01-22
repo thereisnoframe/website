@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{page.css | absolute_url  }}">
+    <link rel="stylesheet" href="{{ "/assets/css/home.css" | relative_url }}">
+    
   <title>Noframe</title>
 </head>
 <body>
@@ -26,13 +27,46 @@
         <div id="bar-holder">
             <div id="status-bar"></div>
         </div>
-          {{content}}
+        <div class="homepage">
+          <span class="logo">Noframe</span>
+          <img src="assets/css/Images/4b3951352f7a2b182931a9205ca4037a.jpg" alt="demo" class="demo"/>
+          <div class="home-line"></div>
+              <div class="light">light mode<span></span></div>
+              <div class="green">green mode<span></span></div>
+      </div>
+      <section class="main-services">
+          <h3>MAIN SERVICES</h3>
+          <div id="anim"></div>
+      </section>
+      <section class="cases">
+          <h1 class="case-header">SOME CASES</h1>
+          {% for case in site.cases %}
+          <div class="case">
+              <div class="left">
+                  <h2 class="case-title">{{case.title}}</h2>
+                  <h3 class="case-subtitle">{{case.sub-title}}</h3>
+                  <p class="case-blurb">{{case.blurb}}</p>
+                  <div class="case-picture-left" style="background-image: url('{{case.left-img}}');"></div>
+              </div>
+              <div class="right">
+                  <img src="{{case.right-img}}" alt="case picture" class="case-picture-right" />
+              </div>
+          </div>
+          {% endfor %}
+      </section>
+      <section class="more">
+          <h1 class="more-header">I want to see more</h1 c>
+          <div class="more-line"></div>
+      </section>
+      <section class="contact-section">
+          <p>We love building things with great people and we love hearing new ideas<br> <span class="email">hello@thereisnoframe.com</span> <span class="collaborations">for collaborations</span></p>
+      </section>
         <footer>
             <a href="#" class="dribble">Dribble</a>
             <a href="#" class="twitter">Twitter</a>
             <a href="#"class="behance">Behance</a>
         </footer>
     </main>
-    <script src="{{page.js}}"></script>
+    <script src="{{ "/assets/css/js/main.js" | relative_url }}"></script>
 </body>
 </html>

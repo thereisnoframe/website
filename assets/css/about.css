@@ -1,0 +1,603 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overscroll-behavior: none;
+}
+
+@font-face {
+    font-family: Circular Std;
+    src: url('./fonts/CircularStd-Book.otf');
+}
+
+@font-face {
+    font-family: Berthold;
+    src: url('./fonts/Berthold-Akzidenz-Grotesk-BE-Regular.otf');
+}
+
+@font-face {
+    font-family: Schnyder L Demi;
+    src: url('./fonts/Schnyder-L-Demi.otf');
+}
+
+@font-face {
+    font-family: Schnyder S Demi;
+    src: url('./fonts/Schnyder-S-Demi.otf');
+}
+
+/* cursor */
+
+.cursor {
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    transition-duration: 400ms;
+    transition-timing-function: ease-out;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 4;
+}
+
+nav {
+    position: relative;
+    width: 100vw;
+    height: 141px;
+    left: 0px;
+    top: 0px;
+    text-align: center;
+}
+
+nav a {
+    display: block;
+    font-size: 36px;
+    font-family: Circular Std;
+    text-decoration: none;
+    color: black;
+    cursor: none;
+}
+
+nav span {
+    font-size: 16px;
+    display: block;
+}
+
+nav a:hover {
+    text-shadow: -14px 16px 0.5px white, -28px 32px 0 black;
+    color: #D8553B; 
+}
+
+nav a:hover span {
+    display: none;
+}
+
+nav li {
+    list-style: none;
+}
+
+.work {
+    position: absolute;
+    left: 64px;
+    top: 30px;
+}
+
+.about {
+    position: absolute;
+    left: 230px;
+    top: 30px;
+}
+
+.lab {
+    position: absolute;
+    left: 1054px;
+    top: 30px;
+}
+
+.contact {
+    position: absolute;
+    left: 1226px;
+    top: 30px;
+}
+
+.home-link {
+    position: absolute;
+    font-size: 16px;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    font-family: Berthold;
+    display: inline-block;
+}
+
+
+
+.about-landing {
+    height: 100vh;
+    font-family: Schnyder L Demi;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 70px;
+    background: #E5E5E5;
+    /* display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    flex: 1; */
+    position: relative;
+}
+
+.about-landing p {
+    text-align: center;
+    position: absolute;
+    left: 120px;
+    top: 245px;
+}
+
+.about-landing ul {
+    list-style: none;
+    position: absolute;
+    left: 1030px;
+    top: 245px;
+}
+
+.number {
+    color: #BDF166;
+    font-family: Berthold;
+    font-size: 40px;
+}
+
+.scroll {
+    font-family: Berthold;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.scroll-line {
+    border-bottom: 1px solid #000000;
+    transform: rotate(90deg);
+    width: 120px;
+    margin: 0 auto;
+}
+
+/* about section */
+
+.about-breakdown {
+    width: 100%;
+    height: 4500px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.77), rgba(0, 0, 0, 0.77)), url('./Images/Canva\ -\ The\ Unsplash\ Book\ on\ Brown\ Wooden\ Cube\ Table.jpg');
+    background-size: cover;
+    background-repeat: round;
+    display: block;
+}
+
+.about-breakdown h1 {
+    font-family: Schnyder M;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 102px;
+    color: #F3F3F3;
+}
+
+.about-breakdown p {
+    font-family: Schnyder S;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #F3F3F3;
+    width: 316px;
+    height: 160px;
+}
+
+/* 1. Learning Section */
+
+.learn {
+    width: 75%;
+    margin: 0 auto;
+    position: relative;
+    height: 1199px;
+}
+
+.learn img {
+    position: absolute;
+    width: 648px;
+    height: 530px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 10%;
+}
+
+.learn h1 {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 28%;
+}
+
+.learn p {
+    position: absolute;
+    right: 0;
+    top: 28%;
+    z-index: 2;
+}
+
+.star {
+    font-family: Zapf Dingbats;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    display: flex;
+    color: #D8553B;
+    animation: spin 3000ms infinite linear;
+    width: 50px;
+    justify-content: center;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 49%;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+
+.secret {
+    font-size: 60px;
+    width: 648px;
+    height: 434px;
+    font-family: Schnyder S;
+    text-align: center;
+    color: #F3F3F3;
+    display: block;
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.hand {
+    font-family: Zapf Dingbats;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    color: #F3F3F3;
+    display: block;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 15%;
+    animation: hand-spin 3000ms infinite linear;
+}
+
+@keyframes hand-spin {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(45deg) ;
+    }
+}
+
+/* 2. Reframe */
+
+.reframe-line {
+    border-bottom: 1px solid #F3F3F3;
+    transform: rotate(90deg);
+    width: 255px;
+    display: block;
+    margin: 0 auto;
+}
+
+.reframe {
+    display: block;
+    height: 1000px;
+    position: relative;
+    width: 75%;
+    margin: 55px auto 0;
+}
+
+.reframe h1 {
+    position: absolute;
+    top: 12%;
+    left: 0;
+}
+
+.reframe p {
+    position: absolute;
+    top: 12%;
+    right: 21%;
+}
+
+br {
+    margin: 10px;
+}
+
+#reframe-image {
+    position: absolute;
+    width: 648px;
+    height: 530px;
+    right: -10%;
+    top: 29%;
+}
+
+#circle-one {
+    position: absolute;
+    width: 50%;
+    left: -30%;
+    top: 25%;
+}
+
+/* 3. Create */
+
+.create {
+    position: relative;
+    display: block;
+    height: 690px;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.create h1 {
+    position: absolute;
+    left: 0;
+    top: 00%;
+}
+
+.create ul {
+    font-family: Schnyder S;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    color: #F3F3F3;
+    list-style: none;
+    position: absolute;
+    left: 38%;
+    top: 5%;
+}
+
+.create li {
+    margin-left: 20px;
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.create-blurb {
+    position: absolute;
+    right: -10%;
+    top: 4%;
+}
+
+.scissor {
+    font-family: Schnyder M;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    color: #BDF166;
+    position: absolute;
+    left: -80px;
+    top: -10px;
+    visibility: hidden;
+}
+
+.create li:hover .scissor {
+    visibility: visible;
+    animation: scissor-spin 3000ms infinite linear;
+}
+
+.create li:hover {
+    color: #BDF166; ;
+}
+
+@keyframes scissor-spin {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-25deg) ;
+    }
+}
+
+.design{
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+.design-title {
+    display: block;
+    height: 210px;
+    width: 490px;
+    margin: 100px auto 0;
+    font-family: Schnyder S;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 60px;
+    color: #F3F3F3; 
+    text-align: center;
+}
+
+.star-2 {
+    font-family: Zapf Dingbats;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    display: flex;
+    color: #D8553B;
+    animation: spin 3000ms infinite linear;
+    width: 50px;
+    justify-content: center;
+    margin: 50px auto 150px;
+}
+
+.line-design {
+    border-bottom: 1px solid #F3F3F3;
+    transform: rotate(90deg);
+    display: block;
+    margin: 0 auto;
+    width: 70px;
+}
+
+.build-something {
+    height: 900px;
+    display: block;
+    position: relative;
+}
+
+
+.build-something h2 {
+    font-family: Circular Std;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 102px;
+    line-height: 129px;
+    text-decoration-line: underline;
+    color: #F3F3F3;
+    position: absolute;
+    text-align: center;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding-top: 45px;
+}
+
+.build-something img {
+    width: 371px;
+    height: 556px;
+    margin: 0 auto;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.build-line-1 {
+    border-bottom: 1px solid #F3F3F3;
+    width: 387px;
+    position: absolute;
+    top: 31%;
+    left: 0;
+}
+
+.build-line-2 {
+    border-bottom: 1px solid #F3F3F3;
+    width: 387px;
+    position: absolute;
+    top: 31%;
+    right: 0;
+}
+
+#circle-two {
+    width: 40%;
+    position: absolute;
+    right: -15%;
+    top: 6%;
+}
+
+.something {
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    animation: build-something 8s linear infinite;
+    opacity: 0;
+}
+
+@keyframes build-something {
+    0% {
+        font-family: Circular Std;
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    20% {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    40% {
+        opacity: 1;
+        transform: translateY(0px);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    60% {
+        opacity: 0;
+        transform: translateY(50px);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(50px);
+        font-family: monospace;
+    }
+}
+
+.something:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.something:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.something:nth-child(3) {
+    animation-delay: 4s;
+}
+
+.something:nth-child(4) {
+    animation-delay: 6s;
+}
+.something:nth-child(5) {
+    animation-delay: 8s;
+}
+
+footer {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    position: absolute;
+    width: 450px;
+    height: 40px;
+    left: 495px;
+    top: 748px;
+    text-align: center;
+    
+}
+
+footer a {
+    margin: 10px 40px;
+    color: white;
+    font-family: Schnyder S Demi;
+    text-decoration: none;
+}

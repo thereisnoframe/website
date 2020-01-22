@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./assets/css/about.css">    
     <title>Noframe</title>
 </head>
 <body>
@@ -38,18 +38,17 @@
         <section class="about-breakdown">
             <div class="learn">
                 <h1><span class="number">1.</span>Learn,</h1>
-                <p>A frame is a perspective from which you look at an issue. Reframing an issue requires changing perspectives</p>
-                <img src="./Images/Canva - Pink Satin Apparel.jpg" alt="arm"/>
+                <p>{{page.learn-text}}</p>
+                <img src="{{page.learn-picture}}" alt="arm"/>
                 <span class="star">✺</span>
-                <span class="secret">The secret is in taking apart these frames with the right set of tools.</span>
+                <span class="secret">{{page.secret}}</span>
                 <span class="hand">✍</span>
             </div>
             <dic class="reframe-line"></dic>
             <div class="reframe">
                 <h1><span class="number">2.</span>Reframe,</h1>
-                <p>A frame is a perspective from which you look at an issue. Reframing an issue requires changing perspectivesA frame is a perspective from which you look at an issue.<br> Design is thinking made visual.</p>
-                <img src="./Images/woman-wearing-white-and-gray-jacket-1070029.jpg" alt="woman in grey" id="reframe-image">
-                <img src="./Images/implement_loop-01.png" alt="Implement" id="circle-one"/>
+                <p>{{page.reframe-text}}</p>
+                <img src="{{page.reframe-image}}" alt="woman in grey" id="reframe-image">
             </div>
             <div class="create">
                 <h1><span class="number">3.</span>Create</h1>
@@ -60,11 +59,12 @@
                     <li><span class="scissor">✄</span>Development</li>
                     <li><span class="scissor">✄</span>Testing</li>
                 </ul>
-                <p class="create-blurb">A frame is a perspective from which you look at an issue. Reframing an issue requires changing perspectivesA frame is a perspective from which you look at an issue. Design is thinking made visual.</p>
+                <p class="create-blurb">{{page.create-blurb}}</p>
             </div>
             <div class="design">
             <h2 class="design-title">Design is thinking made visual.</h2>
-                <img src="./Images/implement_loop-01.png" alt="Implement" id="circle-two"/>
+            <img src="./assets/css/Images/implement_loop-01.png" alt="Implement" id="circle-one"/>
+            <img src="./assets/css/Images/implement_loop-01.png" alt="Implement" id="circle-two"/>
             <div class="line-design"></div>
             <span class="star-2">✺</span>
             </div>
@@ -76,7 +76,7 @@
                         <span class="something">disco party</span> 
                         <br> 
                         together</h2>
-                    <img src="./Images/Canva - Person Wearing Yellow Shoes.jpg" alt="yellow-shoes"/>
+                    <img src="./assets/css/Images/Canva - Person Wearing Yellow Shoes.jpg" alt="yellow-shoes"/>
                     <div class="build-line-1"></div>
                     <div class="build-line-2"></div>
             </section>
@@ -91,6 +91,6 @@
         </footer>
 
         <!-- <script src="./js/main.js"></script> -->
-        <script src="./js/about.js"></script>
+        <script src="./assets/css/js/about.js"></script>
 </body>
 </html>
