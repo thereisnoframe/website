@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overscroll-behavior: none;
+}
+
+@font-face {
+    font-family: Schnyder L Demi;
+    src: url('../fonts/Schnyder-L-Demi.otf');
+}
+
+@font-face {
+    font-family: Circular Std;
+    src: url('../fonts/CircularStd-Book.otf');
+}
+
+@font-face {
+    font-family: Berthold;
+    src: url('../fonts/Berthold-Akzidenz-Grotesk-BE-Regular.otf');
+}
+
+@font-face {
+    font-family: Schnyder S Demi;
+    src: url('../fonts/Schnyder-S-Demi.otf');
+}
+
+
+html {
+    /* caret-color: white;
+    cursor: url('../Images/arrow-cursor-green.png') 4 4, auto;	 */
+    cursor: none;
+}
+
+/* loader */
+
+.loader {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 99;
+}
+
+.loader.hidden {
+    animation: fadeOut 1s; 
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* cursor */
+
+.cursor-circle {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    transition-duration: 300ms;
+    transition-timing-function: ease-out;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    background: black;
+}
+
+.cursor {
+    text-align: center;
+    font-family: Zapf Dingbats;
+    color: #BDF166;
+    font-size: 25px;
+    padding-top: 5px;
+}
+
+/* progress bar */
+
+#bar-holder {
+    position: fixed;
+    height: 100%;
+    width: 8px;
+    z-index: 6;
+}
+
+#status-bar {
+    width: 7px;
+    left: 0px;
+    top: 0px;
+    background: #BDF166;
+}
+
+main {
+    background-image: url('./Images/labbg.png');
+    height: 100%;
+    width: 100vw;
+    background-size: contain;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+}
+
+nav {
+    position: relative;
+    width: 100%;
+    height: 110px;
+    margin: 0 auto;
+    z-index: 5;
+}
+
+.logo {
+    font-family: Schnyder L Demi;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 90px;
+    line-height: 102px;
+    color: #F3F3F3;
+    position: absolute;
+    left: 10%;
+}
+
+.home-link {
+    font-family: Circular Std;
+    font-size: 16px;
+    align-items: center;
+    color: #F3F3F3;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    pointer-events: auto;
+}
+
+.nav-line {
+    border-bottom: 1px solid #BDF166;
+    width: 190px;
+    position: absolute;
+    left: 28%;
+    top: 60%;
+}
+
+.animation {
+    display: block;
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 10%;
+}
+
+.animation-text {
+    position: absolute;
+    width: 525px;
+    height: 23px;
+    right: -8%;
+    top: 50%;
+    font-family: Berthold;
+    font-size: 20px;
+    color: #F3F3F3;
+    transform: rotate(90deg);
+}
+
+/* wayfinder */
+
+.wayfinder {
+    width: 90%;
+    height: 100vh;
+    position: relative;
+    margin: 160px auto 0;
+}
+
+.blog-link-list {
+    position: absolute;
+    left: 31%;
+    width: 60%;
+    text-align: left;
+    list-style: none;
+    z-index: 2;
+}
+
+.way-link {
+    font-family: Schnyder L Demi;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 68px;
+    text-decoration-line: underline;
+    color: #000000;
+}
+
+.way-link.apr {
+    margin-left: 75%;
+}
+
+.way-link.jul, .way-link.aug {
+    margin-left: 55%;
+}
+
+.wayfinder-left {
+    width: 48%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+
+.wayfinder-right {
+    width: 48%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+}
+
+.box {
+    width: 89px;
+    height: 612px;
+    margin: 0 4px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.box img {
+    width: 100%;
+}
+
+.place-holder {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.place-holder-box {
+    position: absolute;
+    width: 546px;
+    height: 536px;
+    background: #C4C4C4;
+    right: 0;
+    top: 20%;
+}
+
+/* article */
+
+article {
+    width: 80%;
+    margin: 170px auto 150px;
+    background-color: white;
+    height: 3878px;
+}
+
+.article-details {
+    /* position: relative; */
+    width: 90%;
+    padding-top: 50px;
+    margin-left: 5%;
+
+}
+
+.article-details span {
+    font-family: Berthold;
+    font-weight: 500;
+    font-size: 20px;
+    color: #000000;
+}
+
+.read-time {
+    margin-left: 30px ;
+}
+
+.article-title {
+    margin: 15px auto 105px;
+    font-family: Schnyder S Demi;
+    font-size: 60px;
+    width: 90%;
+}
+
+.paragraph-one {
+    width: 60%;
+    margin: 0 auto 50px;
+    font-family: Schnyder L Demi;
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.preview-holder {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    height: 800px;
+}
+
+.preview {
+    width: 648px;
+    height: 677px;
+    position: absolute;
+}
+
+.preview.one {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.preview.one:hover {
+    z-index: 4;
+    transition: ease-in;
+}
+
+.preview.two {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 3;
+}
+
+.preview.two:hover {
+    z-index: 4;
+    transition: ease-in;
+}
+
+
+.preview.three {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.preview.three:hover {
+    z-index: 4;
+    transition: ease-in;
+}
+
+
+.paragraph-two {
+    width: 80%;
+    height: 543px;
+    font-family: Schnyder L Demi;
+    font-size: 19px;
+    display: block;
+    columns: 2 13em;
+    margin: 105px auto 0;
+    overflow: hidden;
+}
+
+.article-pic-2 {
+    width: 542px;
+    height: 677px;
+    margin: 10%;
+}
+
+.paragraph-three {
+    height: 170px;
+    font-family: Schnyder L;
+    font-size: 21px;
+    width: 75%;
+    margin: 0 auto 105px;
+}
+
+
+.article-pic-3 {
+    width: 542px;
+    height: 677px;
+    margin-left: 35%;
+}
+
+footer {
+    /* position: relative; */
+    font-family: Schnyder S Demi;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    position: static;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    margin: 0 auto;
+}
+
+footer a {
+    margin: 0 40px;
+    color: black;
+}

@@ -43,6 +43,43 @@ html, body {
     z-index: 100;
 }
 
+#loader {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#loader.hidden {
+    display: none;
+    animation: fadeOut 1s; 
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+/* status bar */
+#bar-holder {
+    position: fixed;
+    height: 100%;
+    width: 8px;
+    z-index: 6;
+}
+
+#status-bar {
+    width: 7px;
+    left: 0px;
+    top: 0px;
+    background: #BDF166;
+}
+
+
 header {
     position: fixed;
     top: 0;

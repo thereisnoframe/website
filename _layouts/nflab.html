@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="{{ "/assets/css/nflab.css" | relative_url }}">
+    <title>Nf Lab</title>
+</head>
+<body>
+    <main>
+    <header>
+        <nav>
+            <h1 class="logo">Nf Lab</h1>
+            <a href="index.html" class="home-link">BACK TO HOME</a>
+            <div class="nav-line"></div>
+        </nav>
+    </header>
+    <div class="loader"></div>
+    <div class="cursor-circle">
+        <div class="cursor">☟</div>
+    </div>
+    <div id="bar-holder">
+        <div id="status-bar"></div>
+    </div>
+    <img src="./Images/lab-home-pic.png" alt="animation" class="animation" />
+    <p class="animation-text">Ref: alt text Ref: alt text Ref: alt text Ref: alt text.</p>
+    <section class="wayfinder">
+        <ul class="blog-link-list">
+        <li><a class="way-link jan" data-month='1' href="#jan">January</a></li>    
+        <li><a class="way-link feb" data-month='2' href="#feb">February</a></li>
+        <li><a class="way-link mar" data-month='3' href="#mar">March</a></li>
+        <li><a class="way-link apr" data-month='4' href="#apr">April</a></li>
+        <li><a class="way-link may" data-month='5' href="#may">May</a></li>
+        <li><a class="way-link jun" data-month='6' href="#jun">June</a></li>
+        <li><a class="way-link jul" data-month='7' href="#jul">July</a></li>
+        <li><a class="way-link aug" data-month='8' href="#aug">August</a></li>
+        <li><a class="way-link sept" data-month='9' href="#sept">September</a></li>
+        <li><a class="way-link oct" data-month='10' href="#oct">October</a></li>
+        <li><a class="way-link nov" data-month='11' href="#nov">November</a></li>
+        <li><a class="way-link dec" data-month='12' href="#dec">December</a></li>
+        </ul>
+        <div class="wayfinder-left">
+            <div class="box jan">
+                <img src="https://www.fillmurray.com/200/500"/>
+            </div>
+            <div class="box feb"></div>
+            <div class="box mar"></div>
+            <div class="box apr"></div>
+            <div class="box may"></div>
+            <div class="box jun"></div>
+        </div>
+        <div class="wayfinder-right">
+            <div class="box jul"></div>
+            <div class="box aug"></div>
+            <div class="box sept"></div>
+            <div class="box oct"></div>
+            <div class="box nov"></div>
+            <div class="box dec"></div>
+        </div>
+    </section>
+    <section class="place-holder">
+        <div class="place-holder-box"></div>
+    </section>
+    <section class="article" id="jan">
+        {% for post in site.nflab %}
+        {% if post.month == 01%}
+        <article>
+            <p class="article-details">
+                <span class="date">01/01/2020</span>
+                <span class="read-time">{{post.read-time}}</span>
+            </p>
+            <h1 class="article-title">
+                {{post.title}}
+            </h1>
+            <p class="paragraph-one">
+                {{post.opening-paragraph}}
+            </p>
+            <div class="preview-holder">
+            <img src="{{post.preview-image-one}}" alt="article picture" class="preview one"/>
+            <img src="{{post.preview-image-two}}" alt="article picture" class="preview two"/>
+            <img src="{{post.preview-image-three}}" alt="article picture" class="preview three"/>
+            </div>
+                <p class="paragraph-two">
+                    {{post.paragraph-two}}
+                </p>
+                <img src="{{post.picture-two}}" alt="article-pic" class="article-pic-2" />
+                <p class="paragraph-three">
+                    {{post.paragraph-three}}
+                </p>
+                <img src="{{post.picture-three}}" alt="article-pic" class="article-pic-3" />
+            </article>
+        {% endif %}
+        {% endfor %}
+    </section>
+        <section class="articles" id="feb">
+            {% for post in site.nflab %}
+            {% if post.month == 02%}
+            <article>
+                <p class="article-details">
+                    <span class="date">01/01/2020</span>
+                    <span class="read-time">{{post.read-time}}</span>
+                </p>
+                <h1 class="article-title">
+                    {{post.title}}
+                </h1>
+                <p class="paragraph-one">
+                    {{post.opening-paragraph}}
+                </p>
+                <div class="preview-holder">
+                <img src="{{post.preview-image-one}}" alt="article picture" class="preview one"/>
+                <img src="{{post.preview-image-two}}" alt="article picture" class="preview two"/>
+                <img src="{{post.preview-image-three}}" alt="article picture" class="preview three"/>
+                </div>
+                    <p class="paragraph-two">
+                        {{post.paragraph-two}}
+                    </p>
+                    <img src="{{post.picture-two}}" alt="article-pic" class="article-pic-2" />
+                    <p class="paragraph-three">
+                        {{post.paragraph-three}}
+                    </p>
+                    <img src="{{post.picture-three}}" alt="article-pic" class="article-pic-3" />
+                </article>
+            {% endif %}
+            {% endfor %}
+        </section>
+        <section class="articles" id="mar">
+            {% for post in site.nflab %}
+            {% if post.month == 03%}
+            <article>
+                <p class="article-details">
+                    <span class="date">01/01/2020</span>
+                    <span class="read-time">{{post.read-time}}</span>
+                </p>
+                <h1 class="article-title">
+                    {{post.title}}
+                </h1>
+                <p class="paragraph-one">
+                    {{post.opening-paragraph}}
+                </p>
+                <div class="preview-holder">
+                <img src="{{post.preview-image-one}}" alt="article picture" class="preview one"/>
+                <img src="{{post.preview-image-two}}" alt="article picture" class="preview two"/>
+                <img src="{{post.preview-image-three}}" alt="article picture" class="preview three"/>
+                </div>
+                    <p class="paragraph-two">
+                        {{post.paragraph-two}}
+                    </p>
+                    <img src="{{post.picture-two}}" alt="article-pic" class="article-pic-2" />
+                    <p class="paragraph-three">
+                        {{post.paragraph-three}}
+                    </p>
+                    <img src="{{post.picture-three}}" alt="article-pic" class="article-pic-3" />
+                </article>
+            {% endif %}
+            {% endfor %}
+        </section>
+        <section class="articles" id="apr">
+            {% for post in site.nflab %}
+            {% if post.month == 04%}
+            <article>
+                <p class="article-details">
+                    <span class="date">01/01/2020</span>
+                    <span class="read-time">{{post.read-time}}</span>
+                </p>
+                <h1 class="article-title">
+                    {{post.title}}
+                </h1>
+                <p class="paragraph-one">
+                    {{post.opening-paragraph}}
+                </p>
+                <div class="preview-holder">
+                <img src="{{post.preview-image-one}}" alt="article picture" class="preview one"/>
+                <img src="{{post.preview-image-two}}" alt="article picture" class="preview two"/>
+                <img src="{{post.preview-image-three}}" alt="article picture" class="preview three"/>
+                </div>
+                    <p class="paragraph-two">
+                        {{post.paragraph-two}}
+                    </p>
+                    <img src="{{post.picture-two}}" alt="article-pic" class="article-pic-2" />
+                    <p class="paragraph-three">
+                        {{post.paragraph-three}}
+                    </p>
+                    <img src="{{post.picture-three}}" alt="article-pic" class="article-pic-3" />
+                </article>
+            {% endif %}
+            {% endfor %}
+        </section>
+        <section class="articles" id="may">
+            {% for post in site.nflab %}
+            {% if post.month == 05%}
+            <article>
+                <p class="article-details">
+                    <span class="date">01/01/2020</span>
+                    <span class="read-time">{{post.read-time}}</span>
+                </p>
+                <h1 class="article-title">
+                    {{post.title}}
+                </h1>
+                <p class="paragraph-one">
+                    {{post.opening-paragraph}}
+                </p>
+                <div class="preview-holder">
+                <img src="{{post.preview-image-one}}" alt="article picture" class="preview one"/>
+                <img src="{{post.preview-image-two}}" alt="article picture" class="preview two"/>
+                <img src="{{post.preview-image-three}}" alt="article picture" class="preview three"/>
+                </div>
+                    <p class="paragraph-two">
+                        {{post.paragraph-two}}
+                    </p>
+                    <img src="{{post.picture-two}}" alt="article-pic" class="article-pic-2" />
+                    <p class="paragraph-three">
+                        {{post.paragraph-three}}
+                    </p>
+                    <img src="{{post.picture-three}}" alt="article-pic" class="article-pic-3" />
+                </article>
+            {% endif %}
+            {% endfor %}
+        </section>
+        <section class="articles" id="jun">
+            {% for post in site.nflab %}
+            {% if post.month == 06%}
+            <article>
+                <p class="article-details">
+                    <span class="date">01/01/2020</span>
+                    <span class="read-time">{{post.read-time}}</span>
+                </p>
+                <h1 class="article-title">
+                    {{post.title}}
+                </h1>
+                <p class="paragraph-one">
+                    {{post.opening-paragraph}}
+                </p>
+                <div class="preview-holder">
+                <img src="{{post.preview-image-one}}" alt="article picture" class="preview one"/>
+                <img src="{{post.preview-image-two}}" alt="article picture" class="preview two"/>
+                <img src="{{post.preview-image-three}}" alt="article picture" class="preview three"/>
+                </div>
+                    <p class="paragraph-two">
+                        {{post.paragraph-two}}
+                    </p>
+                    <img src="{{post.picture-two}}" alt="article-pic" class="article-pic-2" />
+                    <p class="paragraph-three">
+                        {{post.paragraph-three}}
+                    </p>
+                    <img src="{{post.picture-three}}" alt="article-pic" class="article-pic-3" />
+                </article>
+            {% endif %}
+            {% endfor %}
+        </section>
+        <section class="articles" id="jul">
+            {% for post in site.nflab %}
+            {% if post.month == 07%}
+            <article>
+                <p class="article-details">
+                    <span class="date">01/01/2020</span>
+                    <span class="read-time">{{post.read-time}}</span>
+                </p>
+                <h1 class="article-title">
+                    {{post.title}}
+                </h1>
+                <p class="paragraph-one">
+                    {{post.opening-paragraph}}
+                </p>
+                <div class="preview-holder">
+                <img src="{{post.preview-image-one}}" alt="article picture" class="preview one"/>
+                <img src="{{post.preview-image-two}}" alt="article picture" class="preview two"/>
+                <img src="{{post.preview-image-three}}" alt="article picture" class="preview three"/>
+                </div>
+                    <p class="paragraph-two">
+                        {{post.paragraph-two}}
+                    </p>
+                    <img src="{{post.picture-two}}" alt="article-pic" class="article-pic-2" />
+                    <p class="paragraph-three">
+                        {{post.paragraph-three}}
+                    </p>
+                    <img src="{{post.picture-three}}" alt="article-pic" class="article-pic-3" />
+                </article>
+            {% endif %}
+            {% endfor %}
+        </section>
+        <section class="articles" id="aug">
+            {% for post in site.nflab %}
+            {% if post.month == 08%}
+            <article>
+                <p class="article-details">
+                    <span class="date">01/01/2020</span>
+                    <span class="read-time">{{post.read-time}}</span>
+                </p>
+                <h1 class="article-title">
+                    {{post.title}}
+                </h1>
+                <p class="paragraph-one">
+                    {{post.opening-paragraph}}
+                </p>
+                <div class="preview-holder">
+                <img src="{{post.preview-image-one}}" alt="article picture" class="preview one"/>
+                <img src="{{post.preview-image-two}}" alt="article picture" class="preview two"/>
+                <img src="{{post.preview-image-three}}" alt="article picture" class="preview three"/>
+                </div>
+                    <p class="paragraph-two">
+                        {{post.paragraph-two}}
+                    </p>
+                    <img src="{{post.picture-two}}" alt="article-pic" class="article-pic-2" />
+                    <p class="paragraph-three">
+                        {{post.paragraph-three}}
+                    </p>
+                    <img src="{{post.picture-three}}" alt="article-pic" class="article-pic-3" />
+                </article>
+            {% endif %}
+            {% endfor %}
+        </section>
+        <section class="articles" id="sept">
+            {% for post in site.nflab %}
+            {% if post.month == 09%}
+            <article>
+                <p class="article-details">
+                    <span class="date">01/01/2020</span>
+                    <span class="read-time">{{post.read-time}}</span>
+                </p>
+                <h1 class="article-title">
+                    {{post.title}}
+                </h1>
+                <p class="paragraph-one">
+                    {{post.opening-paragraph}}
+                </p>
+                <div class="preview-holder">
+                <img src="{{post.preview-image-one}}" alt="article picture" class="preview one"/>
+                <img src="{{post.preview-image-two}}" alt="article picture" class="preview two"/>
+                <img src="{{post.preview-image-three}}" alt="article picture" class="preview three"/>
+                </div>
+                    <p class="paragraph-two">
+                        {{post.paragraph-two}}
+                    </p>
+                    <img src="{{post.picture-two}}" alt="article-pic" class="article-pic-2" />
+                    <p class="paragraph-three">
+                        {{post.paragraph-three}}
+                    </p>
+                    <img src="{{post.picture-three}}" alt="article-pic" class="article-pic-3" />
+                </article>
+            {% endif %}
+            {% endfor %}
+        </section>
+        <section class="articles" id="oct">
+            {% for post in site.nflab %}
+            {% if post.month == 10%}
+            <article>
+                <p class="article-details">
+                    <span class="date">01/01/2020</span>
+                    <span class="read-time">{{post.read-time}}</span>
+                </p>
+                <h1 class="article-title">
+                    {{post.title}}
+                </h1>
+                <p class="paragraph-one">
+                    {{post.opening-paragraph}}
+                </p>
+                <div class="preview-holder">
+                <img src="{{post.preview-image-one}}" alt="article picture" class="preview one"/>
+                <img src="{{post.preview-image-two}}" alt="article picture" class="preview two"/>
+                <img src="{{post.preview-image-three}}" alt="article picture" class="preview three"/>
+                </div>
+                    <p class="paragraph-two">
+                        {{post.paragraph-two}}
+                    </p>
+                    <img src="{{post.picture-two}}" alt="article-pic" class="article-pic-2" />
+                    <p class="paragraph-three">
+                        {{post.paragraph-three}}
+                    </p>
+                    <img src="{{post.picture-three}}" alt="article-pic" class="article-pic-3" />
+                </article>
+            {% endif %}
+            {% endfor %}
+        </section>
+        <section class="articles" id="nov">
+            {% for post in site.nflab %}
+            {% if post.month == 11%}
+            <article>
+                <p class="article-details">
+                    <span class="date">01/01/2020</span>
+                    <span class="read-time">{{post.read-time}}</span>
+                </p>
+                <h1 class="article-title">
+                    {{post.title}}
+                </h1>
+                <p class="paragraph-one">
+                    {{post.opening-paragraph}}
+                </p>
+                <div class="preview-holder">
+                <img src="{{post.preview-image-one}}" alt="article picture" class="preview one"/>
+                <img src="{{post.preview-image-two}}" alt="article picture" class="preview two"/>
+                <img src="{{post.preview-image-three}}" alt="article picture" class="preview three"/>
+                </div>
+                    <p class="paragraph-two">
+                        {{post.paragraph-two}}
+                    </p>
+                    <img src="{{post.picture-two}}" alt="article-pic" class="article-pic-2" />
+                    <p class="paragraph-three">
+                        {{post.paragraph-three}}
+                    </p>
+                    <img src="{{post.picture-three}}" alt="article-pic" class="article-pic-3" />
+                </article>
+            {% endif %}
+            {% endfor %}
+        </section>
+        <section class="articles" id="dec">
+            {% for post in site.nflab %}
+            {% if post.month == 12%}
+            <article>
+                <p class="article-details">
+                    <span class="date">01/01/2020</span>
+                    <span class="read-time">{{post.read-time}}</span>
+                </p>
+                <h1 class="article-title">
+                    {{post.title}}
+                </h1>
+                <p class="paragraph-one">
+                    {{post.opening-paragraph}}
+                </p>
+                <div class="preview-holder">
+                <img src="{{post.preview-image-one}}" alt="article picture" class="preview one"/>
+                <img src="{{post.preview-image-two}}" alt="article picture" class="preview two"/>
+                <img src="{{post.preview-image-three}}" alt="article picture" class="preview three"/>
+                </div>
+                    <p class="paragraph-two">
+                        {{post.paragraph-two}}
+                    </p>
+                    <img src="{{post.picture-two}}" alt="article-pic" class="article-pic-2" />
+                    <p class="paragraph-three">
+                        {{post.paragraph-three}}
+                    </p>
+                    <img src="{{post.picture-three}}" alt="article-pic" class="article-pic-3" />
+                </article>
+            {% endif %}
+            {% endfor %}
+        </section>
+        <footer>
+            <a href="#" class="dribble">Dribble</a>
+            <a href="#" class="twitter">Twitter</a>
+            <a href="#"class="behance">Behance</a>
+    </footer>
+    <script src="{{ "/assets/css/js/nflab.js" | relative_url }}"></script>
+    </main>
+</body>
+</html>
