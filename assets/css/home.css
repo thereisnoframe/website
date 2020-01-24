@@ -33,7 +33,7 @@ body {
 }
 
 html {
-    cursor: hidden;	
+    cursor: none;	
 }
 
 /* loader */
@@ -74,6 +74,7 @@ nav {
     left: 0px;
     top: 0px;
     text-align: center;
+    transition: ease-in 300ms;
 }
 
 nav a {
@@ -91,8 +92,18 @@ nav span {
 }
 
 nav a:hover {
-    text-shadow: -14px 16px 0.5px white, -28px 32px 0 black;
+    animation: hover 300ms;
+    animation-fill-mode: forwards;
     color: #D8553B; 
+}
+
+@keyframes hover {
+    50% {
+        text-shadow: -22px 22px 0.5px white;
+    }
+    100% {
+        text-shadow: -22px 22px 0.5px white, -42px 42px 0px black;
+    }
 }
 
 nav a:hover span {
@@ -136,6 +147,7 @@ a.green-mode {
     top: 30px;
 }
 
+
 .home-link {
     position: absolute;
     top: 30px;
@@ -166,14 +178,27 @@ a.green-mode {
 .cursor {
     width: 40px;
     height: 40px;
-    border: 2px solid black;
     border-radius: 50%;
+    border: 2px solid black;
     position: absolute;
     pointer-events: none;
     transition-duration: 400ms;
     transition-timing-function: ease-out;
     transform: translate(-50%, -50%);
-    /* z-index: 100; */
+    z-index: 100;
+}
+
+.cursor.animated {
+    animation: cursor 3000ms infinite linear;
+} 
+
+@keyframes cursor {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
 }
 
 /* footer */

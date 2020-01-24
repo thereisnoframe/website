@@ -1,0 +1,360 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overscroll-behavior: none;
+}
+
+@font-face {
+    font-family: Circular Std;
+    src: url('./fonts/CircularStd-Book.otf');
+}
+
+@font-face {
+    font-family: Schnyder S Demi;
+    src: url('./fonts/Schnyder-S-Demi.otf');
+}
+
+@font-face {
+    font-family: Schnyder L Demi;
+    src: url('./fonts/Schnyder-L-Demi.otf');
+}
+html {
+    cursor: none;	
+}
+
+/* loader */
+
+.loader {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 99;
+}
+
+.loader.hidden {
+    animation: fadeOut 1s; 
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* cursor */
+
+.cursor {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 400ms;
+    transition-timing-function: ease-out;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.cursor.animated {
+    animation: cursor 3000ms infinite linear;
+} 
+
+@keyframes cursor {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+}
+
+/* progress bar */
+
+#bar-holder {
+    position: fixed;
+    height: 100%;
+    width: 8px;
+    z-index: 6;
+}
+
+#status-bar {
+    width: 7px;
+    left: 0px;
+    top: 0px;
+    background: #BDF166;
+}
+
+/* Nav bar */
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 4;
+}
+
+nav {
+    position: relative;
+    width: 100vw;
+    height: 141px;
+    left: 0px;
+    top: 0px;
+    text-align: center;
+}
+
+nav a {
+    display: block;
+    font-size: 36px;
+    font-family: Circular Std;
+    text-decoration: none;
+    color: white;
+    cursor: none;
+}
+
+nav span {
+    font-size: 16px;
+    display: block;
+}
+
+nav a:hover {
+    animation: hover 300ms;
+    animation-fill-mode: forwards;
+    color: #D8553B; 
+}
+
+@keyframes hover {
+    50% {
+        text-shadow: -22px 22px 0.5px white;
+    }
+    100% {
+        text-shadow: -22px 22px 0.5px white, -42px 42px 0px black;
+    }
+}
+
+nav a:hover span {
+    display: none;
+}
+
+nav li {
+    list-style: none;
+}
+
+.work {
+    position: absolute;
+    left: 64px;
+    top: 30px;
+}
+
+.about {
+    position: absolute;
+    left: 230px;
+    top: 30px;
+}
+
+.lab {
+    position: absolute;
+    left: 1054px;
+    top: 30px;
+}
+
+.contact {
+    position: absolute;
+    left: 1226px;
+    top: 30px;
+}
+
+.home {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 40px;
+    width: 130px;
+    display: block;
+}
+
+.home-link {
+    font-size: 16px;
+    font-family: Berthold;
+}
+
+
+/* page details */
+
+
+.work-page {
+    width: 100vw;
+    height: 1800px;
+    padding-top: 105px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(36, 86, 43, 0.4) 100%), #000000;
+}
+
+.work-one {
+    height: 648px;
+    margin: 105px auto 0;
+    width: 90%;
+    text-align: center;
+    position: relative;
+}
+
+.cursor.work-preview {
+    position: absolute;
+    height: 500px;
+    width: 200px;
+    /* visibility: hidden; */
+    transition-duration: 400ms;
+    transition-timing-function: ease-out;
+}
+
+.work-link {
+    display: inline-block;
+    /* margin: 0 auto; */
+    font-family: Schnyder L Demi;
+    font-size: 110px;
+    line-height: 125px;
+    text-decoration-line: underline;
+    color: #456852;
+}
+
+.work-two {
+    height: 648px;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+.work-link.two {
+    font-family: Schnyder L Demi;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 110px;
+    line-height: 125px;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #24562B;
+}
+
+.module.hidden {
+    display: none;
+}
+
+.module {
+    height: 100vh;
+    width: 100vw;
+    z-index: 50;
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/* .carousel-container{
+    width: 50%;
+    margin: auto;
+}
+
+.carousel {
+    display: flex;
+} */
+
+.carousel {
+    transform-style: preserve-3d;
+}
+
+.carousel__photo {
+    opacity: 0;
+    position: absolute;
+    top:0;
+    width: 60%;
+    margin: auto;
+    padding: 1rem 4rem;
+    z-index: 100;
+    transition: transform .5s, opacity .5s, z-index .5s;
+}
+
+.carousel__photo.initial,
+.carousel__photo.active {
+    opacity: 1;
+    position: relative;
+    z-index: 900;
+}
+
+/* .carousel__photo.prev,
+.carousel__photo.next {
+    z-index: 800;
+} */
+
+.carousel__photo.prev {
+  transform: translateX(-100%); /* Move 'prev' item to the left */
+}.carousel__photo.next {
+  transform: translateX(100%); /* Move 'next' item to the right */
+}
+
+.carousel__button--prev,
+.carousel__button--next {
+    position: absolute;
+    top:50%;
+    width: 3rem;
+    height: 3rem;
+    background-color: #FFF;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    cursor: pointer; 
+    z-index: 1001; /* Sit on top of everything */
+    border: 1px solid black;
+}
+
+.carousel__button--prev {
+    left:0;
+}
+
+.carousel__button--next {
+    right:0;
+}
+
+.carousel__button--prev::after,
+.carousel__button--next::after {
+    content: " ";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    left: 54%;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.carousel__button--next::after {
+    left: 47%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.module p {
+    color: white;
+}
+
+footer {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    position: static;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    margin: 0 auto;
+}
+
+footer a {
+    margin: 0 40px;
+    color: white;
+    font-family: Schnyder S Demi;
+}

@@ -79,17 +79,17 @@ const isInView = elem => {
 const nav = document.querySelectorAll('nav a');
 
 window.addEventListener('DOMContentLoaded', () => {
+  console.log(cursor)
   window.addEventListener('scroll', () => {
     const services = document.querySelector('.about-breakdown');
-    console.log(services);
-    console.log(window.scrollY);
     debounce(spin());
     if (window.scrollY >= services.offsetTop) {
+      cursor.style.border = '2px solid white';
       nav.forEach(link => {
-        console.log('color change');
         link.style.color = 'white';
       });
     } else {
+      cursor.style.border = '2px solid black';
       nav.forEach(link => {
         link.style.color = 'black';
       });
@@ -154,6 +154,20 @@ function splitLetters(word) {
 
 changeWord();
 setInterval(changeWord, 4000);
+
+const linkHover = document.querySelectorAll('a');
+
+links.forEach(link => {
+  link.addEventListener('mouseover', () => {
+    cursor.classList.add('animated');
+  })
+})
+
+links.forEach(link => {
+  link.addEventListener('mouseleave', () => {
+    cursor.classList.add('animated');
+  })
+})
 
 // footer
 

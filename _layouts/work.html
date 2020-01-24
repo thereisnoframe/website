@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ "/assets/css/work.css" | relative_url }}">
+    <title>NoFrame Work</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                    <li class="work"><a href="work.html">Cases<span>Work</span></a></li>
+                    <li class="about"><a href="about.html">About<span>Workflow</span></a></li>
+                    <li class="lab"><a href="nflab.html">Nf.<span>Lab</span></a></li>
+                    <li class="contact"><a href="contact.html">Contact<span>for Collaborations</span></a></li>
+                    <li class="home"><a href="index.html" class="home-link">BACK TO HOME</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="loader"></div>
+    <div class="cursor"></div>
+    <div id="bar-holder">
+        <div id="status-bar"></div>
+    </div>
+    <main class="work-page">
+        
+        <section class="work-one">
+            <div class="work-preview"></div>
+            <a class="work-link" data-pic="0" href="#">Reincarnating the Sublime</a>
+            <div class="module hidden">
+                <button class="close">X</button>
+                <!-- <div class="carousel-container">
+                <div class="carousel">
+                    <img src="https://www.fillmurray.com/500/500" alt="image"/>
+                    <img src="https://www.placecage.com/500/500" alt="image"/>
+                    <img src="https://baconmockup.com/500/500" alt="image"/>
+                </div>
+                <button id="prev"><</button>
+                <button id="next">></button>
+            </div> -->
+            <div class="carousel-wrapper">
+                <div class="carousel">    
+                <img class="carousel__photo initial" src="https://www.fillmurray.com/500/500">
+                <img class="carousel__photo" src="https://www.placecage.com/500/500">
+                <img class="carousel__photo" src="https://baconmockup.com/500/500">
+                <img class="carousel__photo" src="https://loremflickr.com/200/500">
+                    <button class="carousel__button--next"></button>
+                    <button class="carousel__button--prev"></button>  
+                </div>
+              </div>
+            </div>
+            <a class="work-link" data-pic="1" href="#">The Substitute</a>
+            <div class="module hidden">
+                <button class="close">X</button>
+                <p>two</p>
+            </div>
+            <a class="work-link" data-pic="2" href="#">Behavioral Algorithm </a> 
+            <div class="module hidden">
+                <button class="close">X</button>
+            </div>
+            <a class="work-link" data-pic="3" href="#">The Meditated Motion</a>
+            <a class="work-link" data-pic="4" href="#">Our Forest Vision</a> 
+        </section>
+        <section class="work-two">
+            <a class="work-link two" data-pic="5" href="#">Reincarnating the Sublime</a>
+            <a class="work-link two" data-pic="6" href="#">The Substitute</a>
+            <a class="work-link two" data-pic="7" href="#">Behavioural Algorithm </a>
+            <a class="work-link two" data-pic="8" href="#">The Meditated Motion</a>
+            <a class="work-link two" data-pic="9" href="#">Our Forest Vision</a>
+        </section>
+        <footer>
+            <a href="#" class="dribble">Dribble</a>
+            <a href="#" class="twitter">Twitter</a>
+            <a href="#"class="behance">Behance</a>
+        </footer>
+    </main>
+    <script src="{{ "/assets/css/js/work.js" | relative_url }}"></script>
+
+</body>
+</html>

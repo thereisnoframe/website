@@ -32,6 +32,20 @@ leftPictures.forEach(pic => {
   });
 });
 
+const links = document.querySelectorAll('a');
+
+links.forEach(link => {
+  link.addEventListener('mouseover', () => {
+    cursor.classList.add('animated');
+  })
+})
+
+links.forEach(link => {
+  link.addEventListener('mouseleave', () => {
+    cursor.classList.remove('animated');
+  })
+})
+
 // green-mode
 
 const homePage = document.querySelector('.homepage');

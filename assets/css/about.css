@@ -8,6 +8,10 @@ html, body {
     overscroll-behavior: none;
 }
 
+html {
+    cursor: none;
+}
+
 @font-face {
     font-family: Circular Std;
     src: url('./fonts/CircularStd-Book.otf');
@@ -41,6 +45,19 @@ html, body {
     transition-timing-function: ease-out;
     transform: translate(-50%, -50%);
     z-index: 100;
+}
+
+.cursor.animated {
+    animation: cursor 3000ms infinite linear;
+} 
+
+@keyframes cursor {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
 }
 
 #loader {
@@ -110,8 +127,18 @@ nav span {
 }
 
 nav a:hover {
-    text-shadow: -14px 16px 0.5px white, -28px 32px 0 black;
+    animation: hover 300ms;
+    animation-fill-mode: forwards;
     color: #D8553B; 
+}
+
+@keyframes hover {
+    50% {
+        text-shadow: -22px 22px 0.5px white;
+    }
+    100% {
+        text-shadow: -22px 22px 0.5px white, -42px 42px 0px black;
+    }
 }
 
 nav a:hover span {
@@ -500,9 +527,10 @@ br {
 }
 
 .build-something {
-    height: 900px;
     display: block;
     position: relative;
+    height: 500px;
+    margin-top: 200px;
 }
 
 
@@ -538,7 +566,7 @@ br {
     border-bottom: 1px solid #F3F3F3;
     width: 387px;
     position: absolute;
-    top: 31%;
+    top: 50%;
     left: 0;
 }
 
@@ -546,7 +574,7 @@ br {
     border-bottom: 1px solid #F3F3F3;
     width: 387px;
     position: absolute;
-    top: 31%;
+    top: 50%;
     right: 0;
 }
 
@@ -577,6 +605,7 @@ br {
     float: left;
     transform: translateZ(25px);
     transform-origin: 50% 50% 25px;
+    text-align: center;
 }
 
 .letter.out {
@@ -598,13 +627,9 @@ footer {
     font-style: normal;
     font-weight: 500;
     font-size: 21px;
-    position: absolute;
-    width: 450px;
+    width: 100vw;
     height: 40px;
-    left: 495px;
-    top: 748px;
     text-align: center;
-    
 }
 
 footer a {
