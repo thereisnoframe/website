@@ -10,22 +10,22 @@ html, body {
 
 @font-face {
     font-family: Schnyder L Demi;
-    src: url('../fonts/Schnyder-L-Demi.otf');
+    src: url('./fonts/Schnyder-L-Demi.otf');
 }
 
 @font-face {
     font-family: Circular Std;
-    src: url('../fonts/CircularStd-Book.otf');
+    src: url('./fonts/CircularStd-Book.otf');
 }
 
 @font-face {
     font-family: Berthold;
-    src: url('../fonts/Berthold-Akzidenz-Grotesk-BE-Regular.otf');
+    src: url('./fonts/Berthold-Akzidenz-Grotesk-BE-Regular.otf');
 }
 
 @font-face {
     font-family: Schnyder S Demi;
-    src: url('../fonts/Schnyder-S-Demi.otf');
+    src: url('./fonts/Schnyder-S-Demi.otf');
 }
 
 
@@ -73,11 +73,29 @@ html {
 }
 
 .cursor {
-    text-align: center;
-    font-family: Zapf Dingbats;
-    color: #BDF166;
-    font-size: 25px;
-    padding-top: 5px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    transition-duration: 400ms;
+    transition-timing-function: ease-out;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.cursor.animated {
+    animation: cursor 3000ms infinite linear;
+} 
+
+@keyframes cursor {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
 }
 
 /* progress bar */

@@ -46,5 +46,5 @@ paragraph-two:                     Lorem ipsum dolor sit amet, consectetur adipi
                     labore et dolore magna aliqua.
 picture-two: assets/css/Images/article-pic-2.png
 paragraph-three:                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-picture-three: assets/css/Images/article-pic-3.png
+picture-three: assets/css/Images/article-pic-2.png
 ---

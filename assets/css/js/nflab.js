@@ -2,7 +2,6 @@
 
 window.addEventListener('load', () => {
   const loader = document.querySelector('.loader');
-  console.log('loading');
   loader.className += ' hidden';
 });
 
@@ -24,23 +23,11 @@ window.onscroll = () => {
 
 // mouse
 
-const cursorCircle = document.querySelector('.cursor-circle');
 const cursor = document.querySelector('.cursor');
 const links = document.querySelectorAll('a');
 
 document.addEventListener('mousemove', e => {
-  cursorCircle.setAttribute(
-    'style',
-    `top: ${e.pageY + 12}px; left:${e.pageX + 12}px;`
-  );
-});
-
-window.addEventListener('wheel', function(event) {
-  if (event.deltaY < 0) {
-    cursor.innerHTML = '☝';
-  } else if (event.deltaY > 0) {
-    cursor.innerHTML = '☟';
-  }
+  cursor.setAttribute('style', `top: ${e.pageY}px; left:${e.pageX}px;`);
 });
 
 // nav
@@ -48,18 +35,16 @@ window.addEventListener('wheel', function(event) {
 const logo = document.querySelector('.logo');
 const homeLink = document.querySelector('.home-link');
 const article = document.querySelector('article');
-const navLine = document.querySelector('.nav-line')
+const navLine = document.querySelector('.nav-line');
 
 window.addEventListener('scroll', () => {
   if (window.scrollY >= article.offsetTop) {
     logo.style.visibility = 'hidden';
     homeLink.innerHTML = '^';
     homeLink.style.fontSize = '50px';
-}
-else if (window.scrollY === 0) {
+  } else if (window.scrollY === 0) {
     homeLink.style.right = '50%';
     navLine.style.visibility = 'visible';
-    cursor.innerHTML = '☟';
   } else {
     homeLink.style.left = null;
     homeLink.style.right = '2%';
@@ -71,12 +56,12 @@ else if (window.scrollY === 0) {
 });
 
 homeLink.addEventListener('mouseover', () => {
-  cursor.innerHTML = '🏠';
+  cursor.classList.add('animated');
   homeLink.style.cursor = 'none';
 });
 
 homeLink.addEventListener('mouseleave', () => {
-  cursor.innerHTML = '☟';
+  cursor.classList.remove('animated');
 });
 
 // wayfinder
@@ -84,13 +69,12 @@ homeLink.addEventListener('mouseleave', () => {
 window.addEventListener('DOMContentLoaded', () => {
   const blogLinks = document.querySelectorAll('.way-link');
   const boxes = document.querySelectorAll('.box');
-  console.log(blogLinks);
   blogLinks.forEach(link => {
     link.addEventListener('mouseover', e => {
       const box = boxes[e.target.dataset.month - 1];
       link.style.cursor = 'none';
       box.style.opacity = 0;
-      cursor.innerHTML = '✹';
+      cursor.classList.add('animated');
     });
   });
 
@@ -99,7 +83,42 @@ window.addEventListener('DOMContentLoaded', () => {
       const box = boxes[e.target.dataset.month - 1];
       box.style.opacity = 1;
       box.style.background = 'rgba(255, 255, 255, 0.5)';
-      cursor.innerHTML = '☟';
+      cursor.classList.remove('animated');
+    });
+  });
+  const easeInOutCubic = (t, b, c, d) => {
+    t /= d / 2;
+    if (t < 1) return (c / 2) * t * t * t + b;
+    t -= 2;
+    return (c / 2) * (t * t * t + 2) + b;
+  };
+  const smoothScroll = event => {
+    event.preventDefault();
+    const targetId = event.currentTarget.getAttribute('href');
+    const targetPosition = document.querySelector(targetId).offsetTop;
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    const duration = 2000;
+    let start = null;
+
+    const step = timestamp => {
+      if (!start) start = timestamp;
+      const progress = timestamp - start;
+      window.scrollTo(
+        0,
+        easeInOutCubic(progress, startPosition, distance, duration)
+      );
+      if (progress < duration) window.requestAnimationFrame(step);
+    };
+
+    window.requestAnimationFrame(step);
+  };
+
+  blogLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      smoothScroll(e);
     });
   });
 });
+
+
