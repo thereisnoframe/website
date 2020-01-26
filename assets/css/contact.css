@@ -91,21 +91,6 @@ nav span {
     display: block;
 }
 
-nav a:hover {
-    animation: hover 300ms;
-    animation-fill-mode: forwards;
-    color: #D8553B; 
-}
-
-@keyframes hover {
-    50% {
-        text-shadow: -22px 22px 0.5px white;
-    }
-    100% {
-        text-shadow: -22px 22px 0.5px white, -42px 42px 0px black;
-    }
-}
-
 nav a:hover span {
     display: none;
 }
@@ -240,6 +225,8 @@ footer {
     width: 100%;
     text-align: center;
     padding-bottom: 10px;
+    position: fixed;
+    bottom: 0;
 }
 
 footer a {

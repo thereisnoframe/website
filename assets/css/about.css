@@ -126,20 +126,6 @@ nav span {
     display: block;
 }
 
-nav a:hover {
-    animation: hover 300ms;
-    animation-fill-mode: forwards;
-    color: #D8553B; 
-}
-
-@keyframes hover {
-    50% {
-        text-shadow: -22px 22px 0.5px white;
-    }
-    100% {
-        text-shadow: -22px 22px 0.5px white, -42px 42px 0px black;
-    }
-}
 
 nav a:hover span {
     display: none;
@@ -181,7 +167,7 @@ nav li {
     right: 0;
     margin: 0 auto;
     font-family: Berthold;
-    display: inline-block;
+    display: block;
 }
 
 
@@ -588,8 +574,8 @@ br {
 #circle-two {
     width: 54%;
     position: absolute;
-    right: -21%;
-    top: 6%;
+    right: -30%;
+    top: -3%;
 }
 
 .something {

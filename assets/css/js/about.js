@@ -63,23 +63,10 @@ const spin = () => {
   circleTwo.style.transform = `rotate(${window.pageYOffset / 5}deg)`;
 };
 
-const isInView = elem => {
-  console.log('view');
-  const bounding = elem.getBoundingClientRect();
-  return (
-    bounding.top >= 0 &&
-    bounding.left >= 0 &&
-    bounding.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) &&
-    bounding.right <=
-      (window.innerWidth || document.documentElement.clientWidth)
-  );
-};
 
 const nav = document.querySelectorAll('nav a');
 
 window.addEventListener('DOMContentLoaded', () => {
-  console.log(cursor)
   window.addEventListener('scroll', () => {
     const services = document.querySelector('.about-breakdown');
     debounce(spin());

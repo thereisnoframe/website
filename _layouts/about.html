@@ -24,16 +24,16 @@
                         <li class="about"><a href="about.html">About<span>Workflow</span></a></li>
                         <li class="lab"><a href="nflab.html">Nf.<span>Lab</span></a></li>
                         <li class="contact"><a href="contact.html">Contact<span>for Collaborations</span></a></li>
-                        <li class="home"><a href="index.html" class="home-link">BACK TO HOME</a></li>
+                        <li><a href="index.html" class="home-link">BACK TO HOME</a></li>
                     </ul>
                 </nav>
         </header>
         <section class="about-landing">
-            <p>This is how the magic happens</p>
+            <p>{{page.landing-text}}</p>
             <ul>
-                <li><span class="number">1.</span>Learn,</li>
-                <li><span class="number">2.</span>Reframe,</li>
-                <li><span class="number">3.</span>Create,</li>
+                <li><span class="number">1.</span>{{page.one}}</li>
+                <li><span class="number">2.</span>{{page.two}}</li>
+                <li><span class="number">3.</span>{{page.three}}</li>
             </ul>
             <h2 class="scroll">SCROLL DOWN</h2>
         </section>
@@ -41,7 +41,7 @@
         <div class="scroll-line"></div>
         <section class="about-breakdown">
             <div class="learn">
-                <h1><span class="number">1.</span>Learn,</h1>
+                <h1><span class="number">1.</span>{{page.learn-title}}</h1>
                 <p>{{page.learn-text}}</p>
                 <img src="{{page.learn-picture}}" alt="arm"/>
                 <span class="star">✺</span>
@@ -50,18 +50,18 @@
             </div>
             <dic class="reframe-line"></dic>
             <div class="reframe">
-                <h1><span class="number">2.</span>Reframe,</h1>
+                <h1><span class="number">2.</span>{{page.reframe-title}}</h1>
                 <p>{{page.reframe-text}}</p>
                 <img src="{{page.reframe-image}}" alt="woman in grey" id="reframe-image">
             </div>
             <div class="create">
-                <h1><span class="number">3.</span>Create</h1>
+                <h1><span class="number">3.</span>{{page.create-title}}</h1>
                 <ul>
-                    <li><span class="scissor">✄</span>Information Architecture</li>
-                    <li><span class="scissor">✄</span>Art Direction</li>
-                    <li><span class="scissor">✄</span>Interaction</li>
-                    <li><span class="scissor">✄</span>Development</li>
-                    <li><span class="scissor">✄</span>Testing</li>
+                    <li><span class="scissor">✄</span>{{page.create-list-one}}</li>
+                    <li><span class="scissor">✄</span>{{page.create-list-two}}</li>
+                    <li><span class="scissor">✄</span>{{page.create-list-three}}</li>
+                    <li><span class="scissor">✄</span>{{page.create-list-four}}</li>
+                    <li><span class="scissor">✄</span>{{page.create-list-five}}</li>
                 </ul>
                 <p class="create-blurb">{{page.create-blurb}}</p>
             </div>
