@@ -58,6 +58,7 @@ html {
     transition-duration: 400ms;
     transition-timing-function: ease-out;
     transform: translate(-50%, -50%);
+    pointer-events: none;
     z-index: 100;
 }
 
@@ -169,11 +170,7 @@ nav li {
 }
 
 .home {
-    position: absolute;
-    top: 30px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+    margin: 30px auto 0;
     height: 40px;
     width: 130px;
     display: block;
@@ -203,24 +200,21 @@ nav li {
     position: relative;
 }
 
-.cursor.work-preview {
-    position: absolute;
-    height: 500px;
-    width: 200px;
-    /* visibility: hidden; */
-    transition-duration: 400ms;
-    transition-timing-function: ease-out;
+.work-one.module {
+    pointer-events: none;
 }
+
 
 .work-link {
     display: inline-block;
-    /* margin: 0 auto; */
     font-family: Schnyder L Demi;
     font-size: 110px;
     line-height: 125px;
     text-decoration-line: underline;
     color: #456852;
 }
+
+
 
 .work-two {
     height: 648px;
@@ -254,6 +248,7 @@ nav li {
     top: 0;
     left: 0;
     right: 0;
+    display: block;
 }
 
 .carousel {

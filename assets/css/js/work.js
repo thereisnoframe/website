@@ -62,11 +62,14 @@ window.addEventListener('DOMContentLoaded', () => {
     const linkNum = link.dataset.pic;
     link.addEventListener('click', event => {
       event.preventDefault();
+      const workSection = document.querySelector('.work-one');
+      workSection.classList.add('module');
       const close = document.querySelectorAll('.close');
       const carousel = document.querySelectorAll('.carousel');
       module[linkNum].classList.remove('hidden');
       close[linkNum].addEventListener('click', () => {
         module[linkNum].classList.add('hidden');
+        workSection.classList.remove('module');
       });
       const imageClass = 'carousel__photo';
       const carouselImages = carousel[linkNum].children;
