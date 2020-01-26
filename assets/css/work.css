@@ -26,6 +26,7 @@ html {
     cursor: none;	
 }
 
+
 /* loader */
 
 .loader {
@@ -122,21 +123,6 @@ nav span {
     display: block;
 }
 
-nav a:hover {
-    animation: hover 300ms;
-    animation-fill-mode: forwards;
-    color: #D8553B; 
-}
-
-@keyframes hover {
-    50% {
-        text-shadow: -22px 22px 0.5px white;
-    }
-    100% {
-        text-shadow: -22px 22px 0.5px white, -42px 42px 0px black;
-    }
-}
-
 nav a:hover span {
     display: none;
 }
@@ -187,8 +173,9 @@ nav li {
 
 .work-page {
     width: 100vw;
-    height: 1800px;
+    height: 100%;
     padding-top: 105px;
+    padding-bottom: 200px;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(36, 86, 43, 0.4) 100%), #000000;
 }
 
@@ -204,35 +191,49 @@ nav li {
     pointer-events: none;
 }
 
-
-.work-link {
-    display: inline-block;
-    font-family: Schnyder L Demi;
-    font-size: 110px;
-    line-height: 125px;
-    text-decoration-line: underline;
-    color: #456852;
-}
-
-
-
-.work-two {
-    height: 648px;
-    width: 90%;
-    text-align: center;
-    margin: 0 auto;
+.case-holder {
     position: relative;
 }
 
-.work-link.two {
-    font-family: Schnyder L Demi;
+.work-link {
     display: inline-block;
-    font-weight: 500;
+    position: relative;
+    font-family: Schnyder L Demi;
     font-size: 110px;
     line-height: 125px;
-    text-align: center;
     text-decoration-line: underline;
     color: #24562B;
+    cursor: none;
+}
+
+.work-link:hover {
+    z-index: 10;
+}
+
+.work-preview {
+    display: none;
+}
+
+.work-preview.visible {
+    position: absolute;
+    left: 0;
+    top: -57%;
+    height: 400px;
+    display: block;
+    animation: image-blur 300ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes image-blur {
+    0% {
+        filter: blur(10px);
+    }
+    50% {
+        filter: blur(5px);
+    }
+    100% {
+        filter: blur(0);
+    }
 }
 
 .module.hidden {
@@ -249,6 +250,24 @@ nav li {
     left: 0;
     right: 0;
     display: block;
+    transition: ease-in-out 300ms;
+}
+
+.close {
+    position: fixed;
+    top: 5%;
+    right: 10%;
+    height: 50px;
+    width: 50px;
+    color: white;
+    background: none;
+    border-radius: 50%;
+    cursor: none;
+}
+
+.carousel-wrapper {
+    width: 70%;
+    margin: 0 auto;
 }
 
 .carousel {
@@ -258,9 +277,9 @@ nav li {
 .carousel__photo {
     opacity: 0;
     position: absolute;
-    top: 10%;
-    width: 50%;
-    margin: auto;
+    display: block;
+    width: 70%;
+    margin: 60px auto;
     z-index: 30;
     transition: transform .5s, opacity .5s, z-index .5s;
 }
@@ -292,15 +311,18 @@ nav li {
     height: 50px;
     width: 50px;
     color: white;
+    background: none;
+    border-radius: 50%;
     z-index: 1001;
+    cursor: none;
 }
 
 .prev-button {
-    left:10%;
+    left:5%;
 }
 
 .next-button {
-    right:10%;
+    right:5%;
 }
 
 

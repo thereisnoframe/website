@@ -478,6 +478,9 @@ button {
     font-size: 102px;
     color: #000000;
     padding-top: 15%;
+    display: block;
+    text-decoration: none;
+    cursor: none;
 }
 
 .more-line {

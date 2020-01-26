@@ -19,7 +19,10 @@ window.onscroll = () => {
 const cursor = document.querySelector('.cursor');
 
 document.addEventListener('mousemove', e => {
-  cursor.setAttribute('style', `top: ${e.pageY}px; left:${e.pageX}px;`);
+  cursor.setAttribute(
+    'style',
+    `top: ${e.pageY + 12}px; left:${e.pageX + 12}px;`
+  );
 });
 
 const leftPictures = document.querySelectorAll('.case-picture-left');
@@ -37,14 +40,14 @@ const links = document.querySelectorAll('a');
 links.forEach(link => {
   link.addEventListener('mouseover', () => {
     cursor.classList.add('animated');
-  })
-})
+  });
+});
 
 links.forEach(link => {
   link.addEventListener('mouseleave', () => {
     cursor.classList.remove('animated');
-  })
-})
+  });
+});
 
 // green-mode
 
@@ -57,7 +60,7 @@ const greenMode = document.querySelector('.green');
 let green = false;
 
 greenMode.addEventListener('click', () => {
-  console.log(navLinks)
+  console.log(navLinks);
   green = true;
   homePage.classList.add('green-mode');
   navLinks.forEach(link => {
@@ -73,7 +76,7 @@ lightMode.addEventListener('click', () => {
   homePage.classList.remove('green-mode');
   navLinks.forEach(link => {
     link.classList.remove('green-mode');
-    console.log('removed')
+    console.log('removed');
   });
   homeLine.classList.remove('green-mode');
   lightMode.classList.remove('green-mode');

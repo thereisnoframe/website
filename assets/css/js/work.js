@@ -26,8 +26,23 @@ window.onscroll = () => {
 const cursor = document.querySelector('.cursor');
 const links = document.querySelectorAll('a');
 
+links.forEach(link => {
+  link.addEventListener('mouseover', () => {
+    cursor.classList.add('animated');
+  });
+});
+
+links.forEach(link => {
+  link.addEventListener('mouseleave', () => {
+    cursor.classList.remove('animated');
+  });
+});
+
 document.addEventListener('mousemove', e => {
-  cursor.setAttribute('style', `top: ${e.pageY}px; left:${e.pageX}px;`);
+  cursor.setAttribute(
+    'style',
+    `top: ${e.pageY + 12}px; left:${e.pageX + 12}px;`
+  );
 });
 
 const images = [
@@ -44,15 +59,25 @@ const images = [
 ];
 window.addEventListener('DOMContentLoaded', () => {
   const workLinks = document.querySelectorAll('.work-link');
+  const workPreview = document.querySelectorAll('.work-preview');
   workLinks.forEach(link => {
+    const num = link.dataset.pic;
     link.addEventListener('mouseover', event => {
       cursor.classList.add('animated');
+      const preview = workPreview[num];
+      preview.classList.add('visible');
+      console.log('do stuff please');
+      preview.style.left = `${event.pageX}px;`;
+      // preview.style.transform = `translateX(${e.pageX}px);`
     });
   });
 
   workLinks.forEach(link => {
+    const num = link.dataset.pic;
     link.addEventListener('mouseleave', () => {
       cursor.classList.remove('animated');
+      const preview = workPreview[num];
+      preview.classList.remove('visible');
     });
   });
 
@@ -90,9 +115,6 @@ window.addEventListener('DOMContentLoaded', () => {
       };
 
       const moveCarouselTo = slideChoice => {
-        console.log('alright I will move it');
-        console.log(slideChoice);
-        console.log(moving);
         if (!moving) {
           disableInteraction();
 
@@ -121,7 +143,6 @@ window.addEventListener('DOMContentLoaded', () => {
           carouselImages[newPrevious].className = `${imageClass} prev`;
           carouselImages[slide].className = `${imageClass} active`;
           carouselImages[newNext].className = imageClass;
-          console.log(carouselImages);
         }
       };
 
