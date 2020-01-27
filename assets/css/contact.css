@@ -208,6 +208,7 @@ a.green-mode {
 
 .email {
     color: #BDF166;
+    border-bottom: 4px solid #BDF166;
 }
 
 .collaborations {

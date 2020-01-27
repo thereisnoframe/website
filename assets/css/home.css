@@ -509,7 +509,9 @@ button {
 
 .email {
     color: #BDF166;
+    border-bottom: 4px solid #BDF166;
 }
+
 
 .collaborations {
     font-family: Berthold;
