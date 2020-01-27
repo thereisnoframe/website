@@ -39,10 +39,7 @@ links.forEach(link => {
 });
 
 document.addEventListener('mousemove', e => {
-  cursor.setAttribute(
-    'style',
-    `top: ${e.pageY}px; left:${e.pageX}px;`
-  );
+  cursor.setAttribute('style', `top: ${e.pageY}px; left:${e.pageX}px;`);
 });
 
 const images = [
@@ -68,10 +65,9 @@ window.addEventListener('DOMContentLoaded', () => {
       preview.classList.add('visible');
       console.log('do stuff please');
       window.addEventListener('mousemove', e => {
-        console.log(e.pageX)
-        preview.style.left = `${e.pageX}px;`;
+        preview.setAttribute('style', `left:${e.pageX}px;`);
       });
-      
+
       // preview.style.transform = `translateX(${e.pageX}px);`
     });
   });
