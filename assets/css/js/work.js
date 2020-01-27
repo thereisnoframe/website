@@ -41,7 +41,7 @@ links.forEach(link => {
 document.addEventListener('mousemove', e => {
   cursor.setAttribute(
     'style',
-    `top: ${e.pageY + 12}px; left:${e.pageX + 12}px;`
+    `top: ${e.pageY}px; left:${e.pageX}px;`
   );
 });
 
@@ -67,7 +67,11 @@ window.addEventListener('DOMContentLoaded', () => {
       const preview = workPreview[num];
       preview.classList.add('visible');
       console.log('do stuff please');
-      preview.style.left = `${event.pageX}px;`;
+      window.addEventListener('mousemove', e => {
+        console.log(e.pageX)
+        preview.style.left = `${e.pageX}px;`;
+      });
+      
       // preview.style.transform = `translateX(${e.pageX}px);`
     });
   });

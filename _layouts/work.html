@@ -25,13 +25,13 @@
         <div id="status-bar"></div>
     </div>
     <main class="work-page">
-        
         <section class="work-one">
+        {%for example in site.work-examples%}
             <div class="case-holder">
-                <a class="work-link" data-pic="0" href="#">Reincarnating the Sublime</a>
-                <img class="work-preview" src="https://www.placecage.com/500/500">
+                <a class="work-link" data-pic="{{example.data}}" href="#">{{example.title}}</a>
+                <img class="work-preview" src="{{example.picture-one}}">
             </div>
-            <a class="work-link" data-pic="1" href="#">The Substitute</a>
+        {% endfor %}
         </section>
         <footer>
             <a href="#" class="dribble">Dribble</a>
@@ -39,32 +39,20 @@
             <a href="#" class="behance">Behance</a>
         </footer>
     </main>
+    {%for example in site.work-examples%}
     <div class="module hidden">
         <button class="close">X</button>
     <div class="carousel-wrapper">
         <div class="carousel">    
-        <img class="carousel__photo initial" src="https://www.fillmurray.com/500/500">
-        <img class="carousel__photo" src="https://www.placecage.com/500/500">
-        <img class="carousel__photo" src="https://baconmockup.com/500/500">
-        <img class="carousel__photo" src="https://loremflickr.com/200/500">
+        <img class="carousel__photo initial" src="{{example.picture-one}}"/>
+        <img class="carousel__photo" src="{{example.picture-two}}"/>
+        <img class="carousel__photo" src="{{example.picture-three}}"/>
         </div>
             <button class="next-button">→</button>
             <button class="prev-button">←</button> 
     </div>
     </div>
-    <div class="module hidden">
-        <button class="close">X</button>
-    <div class="carousel-wrapper">
-        <div class="carousel">    
-        <img class="carousel__photo initial" src="https://www.fillmurray.com/700/700">
-        <img class="carousel__photo" src="https://www.placecage.com/700/700">
-        <img class="carousel__photo" src="https://baconmockup.com/700/700">
-        <img class="carousel__photo" src="https://loremflickr.com/700/700">
-        </div>
-            <button class="next-button">→</button>
-            <button class="prev-button">←</button> 
-    </div>
-    </div>
+    {%endfor%}
     <script src="{{ "/assets/css/js/work.js" | relative_url }}"></script>
 
 </body>
