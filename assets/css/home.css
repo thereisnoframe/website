@@ -28,9 +28,7 @@ html, body {
     src: url('./fonts/Schnyder-S-Demi.otf');
 }
 
-body {
-    background: #F6F5F5;
-}
+
 
 html {
     cursor: none;	
@@ -198,7 +196,7 @@ footer {
 }
 
 footer a {
-    margin: 0 40px;
+    margin: 0 40px 37px;
     font-family: Schnyder S Demi;
     text-decoration: none;
     display: inline-block;
@@ -209,6 +207,7 @@ footer a {
     position: relative;
     display: block;
     height: 100vh;
+    background-color: #F6F5F5;
 }
 
 .homepage.green-mode {
@@ -313,8 +312,8 @@ button {
     padding: 15px;
     transition: ease-in 0.4s;
     border-radius: 64% 36% 27% 73% / 55% 58% 42% 45%;
-
 }
+
 
 .light:hover {
     background-color: black;
@@ -341,16 +340,10 @@ button {
 
 @keyframes blob {
     0%, 100% {
-        border-radius: 24% 36% 27% 23% / 45% 38% 42% 45%;
-    }
-    25% {
-        border-radius: 44% 56% 37% 23% / 45% 18% 52% 55%;
+        border-radius: 64% 36% 27% 73% / 55% 58% 42% 45%;
     }
     50% {
-        border-radius: 49% 56% 17% 21% / 42% 19% 22% 26%;
-    }
-    75% {
-        border-radius: 22% 36% 50% 44% / 19% 38% 22% 50%;
+        border-radius: 60% 40% 23% 69% / 51% 54% 46% 49%;
     }
 }
 
@@ -359,6 +352,7 @@ button {
 .main-services {
     display: block;
     height: 100vh;
+    background-color: #F6F5F5;
 }
 
 .main-services h3 {
@@ -368,6 +362,12 @@ button {
     font-size: 18px;
     text-transform: uppercase;
     color: #000000;
+}
+
+.service-gif {
+    margin: 0 auto;
+    display: block;
+    width: 80%;
 }
 /* work examples */
 .case-header {
@@ -457,19 +457,12 @@ button {
 }
 
 
-/* .case-picture-left.one {
-    background-image: url('./Images/Laura-Butler-by-Iringo-Demeter-for-BEAR-x-Cereal-Magazine-14.jpg');
-} */
-
-/* .case-picture-left.two {
-    background-image: url('./Images/pexels-2969926.jpg');
-} */
-
 /* more */
 
 .more {
     display: block;
     height: 100vh;
+    background-color: #FFF1EE;
 }
 
 .more-header {
@@ -484,7 +477,7 @@ button {
 }
 
 .more-line {
-    border-bottom: 0.5px solid #000000;
+    border-bottom: 2px solid #000000;
     width: 845px;
     margin: 0 auto;
 }

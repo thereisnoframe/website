@@ -21,7 +21,7 @@ const cursor = document.querySelector('.cursor');
 document.addEventListener('mousemove', e => {
   cursor.setAttribute(
     'style',
-    `top: ${e.pageY + 12}px; left:${e.pageX + 12}px;`
+    `top: ${e.pageY - 12}px; left:${e.pageX - 12}px;`
   );
 });
 

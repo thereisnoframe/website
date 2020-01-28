@@ -36,7 +36,7 @@ const links = document.querySelectorAll('a');
 // })
 
 document.addEventListener('mousemove', e => {
-  cursor.setAttribute('style', `top: ${e.pageY}px; left:${e.pageX}px;`);
+  cursor.setAttribute('style', `top: ${e.pageY - 12}px; left:${e.pageX - 12}px;`);
 });
 
 const debounce = (func, wait = 20, immediate = true) => {
@@ -149,7 +149,7 @@ links.forEach(link => {
 
 links.forEach(link => {
   link.addEventListener('mouseleave', () => {
-    cursor.classList.add('animated');
+    cursor.classList.remove('animated');
   })
 })
 

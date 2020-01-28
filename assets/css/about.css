@@ -167,6 +167,8 @@ nav li {
 }
 
 .home-link {
+    position: absolute;
+    top: 30px;
     font-size: 16px;
     font-family: Berthold;
 }
@@ -482,7 +484,7 @@ br {
     display: block;
     height: 210px;
     width: 490px;
-    margin: 100px auto 0;
+    margin: 260px auto 0;
     font-family: Schnyder S;
     font-style: normal;
     font-weight: 500;
@@ -516,7 +518,7 @@ br {
     display: block;
     position: relative;
     height: 500px;
-    margin-top: 200px;
+    margin-top: 250px;
 }
 
 
@@ -552,7 +554,7 @@ br {
     border-bottom: 1px solid #F3F3F3;
     width: 387px;
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 0;
 }
 
@@ -560,7 +562,7 @@ br {
     border-bottom: 1px solid #F3F3F3;
     width: 387px;
     position: absolute;
-    top: 50%;
+    top: 55%;
     right: 0;
 }
 
@@ -619,7 +621,7 @@ footer {
 }
 
 footer a {
-    margin: 10px 40px;
+    margin: 10px 40px 37px;
     color: white;
     font-family: Schnyder S Demi;
     text-decoration: none;

@@ -140,6 +140,8 @@ a.green-mode {
 }
 
 .home-link {
+    position: absolute;
+    top: 30px;
     font-size: 16px;
     font-family: Berthold;
 }
@@ -233,9 +235,8 @@ footer {
 }
 
 footer a {
-    margin: 0 40px;
+    margin: 10px 40px 37px;
     font-family: Schnyder S Demi;
     text-decoration: none;
-    display: inline-block;
     color:black;
 }
