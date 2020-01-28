@@ -164,6 +164,8 @@ nav li {
 }
 
 .home-link {
+    position: absolute;
+    top: 30px;
     font-size: 16px;
     font-family: Berthold;
 }
@@ -327,21 +329,20 @@ nav li {
     right:5%;
 }
 
-
-
 footer {
     font-style: normal;
     font-weight: 500;
     font-size: 21px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    width: 100vw;
+    height: 40px;
     text-align: center;
-    margin: 0 auto;
+    position: fixed;
+    bottom: 0;
 }
 
 footer a {
-    margin: 0 40px;
+    margin: 10px 40px 37px;
     color: white;
     font-family: Schnyder S Demi;
+    text-decoration: none;
 }

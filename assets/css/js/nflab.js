@@ -34,37 +34,25 @@ document.addEventListener('mousemove', e => {
 
 const logo = document.querySelector('.logo');
 const homeLink = document.querySelector('.home-link');
+const backToTop = document.querySelector('.back-to-top');
 const article = document.querySelector('article');
 const navLine = document.querySelector('.nav-line');
 
 window.addEventListener('scroll', () => {
   if (window.scrollY >= article.offsetTop) {
     logo.style.visibility = 'hidden';
-    homeLink.innerHTML = '^';
-    homeLink.style.fontSize = '50px';
-    homeLink.addEventListener('click', e => {
-      e.preventDefault();
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'smooth',
-      });
-    });
+    backToTop.classList.remove('hidden');
+    homeLink.classList.add('hidden');
   } else if (window.scrollY === 0) {
+    backToTop.classList.add('hidden');
+    homeLink.classList.remove('hidden');
     homeLink.style.right = '50%'; 
     navLine.style.visibility = 'visible';
-    homeLink.removeEventListener('click', e => {
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'smooth',
-      });
-    });
   } else {
+    homeLink.classList.remove('hidden');
+    backToTop.classList.add('hidden');
     homeLink.style.left = null;
     homeLink.style.right = '2%';
-    homeLink.innerHTML = 'Back to home';
-    homeLink.style.fontSize = '16px';
     logo.style.visibility = 'visible';
     navLine.style.visibility = 'hidden';
   }
@@ -86,7 +74,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const boxes = document.querySelectorAll('.box');
   blogLinks.forEach(link => {
     link.addEventListener('mouseover', e => {
-      const box = boxes[e.target.dataset.month - 1];
+      const box = boxes[e.target.dataset.box];
       link.style.cursor = 'none';
       box.style.opacity = 0;
       cursor.classList.add('animated');
@@ -95,12 +83,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
   blogLinks.forEach(link => {
     link.addEventListener('mouseleave', e => {
-      const box = boxes[e.target.dataset.month - 1];
+      const box = boxes[e.target.dataset.box];
       box.style.opacity = 1;
       box.style.background = 'rgba(255, 255, 255, 0.5)';
       cursor.classList.remove('animated');
     });
   });
+
   const easeInOutCubic = (t, b, c, d) => {
     t /= d / 2;
     if (t < 1) return (c / 2) * t * t * t + b;
@@ -136,4 +125,6 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
+backToTop.addEventListener('click', e => {
+  smoothScroll(e);
+});

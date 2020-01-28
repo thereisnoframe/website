@@ -28,15 +28,11 @@ window.onscroll = () => {
 const cursor = document.querySelector('.cursor');
 const links = document.querySelectorAll('a');
 
-// links.forEach(link => {
-//     link.addEventListener('mouseover', () => {
-//         console.log('its hovering')
-//         cursor.style.backgroundColor= 'black'
-//     })
-// })
-
 document.addEventListener('mousemove', e => {
-  cursor.setAttribute('style', `top: ${e.pageY}px; left:${e.pageX}px;`);
+  cursor.setAttribute(
+    'style',
+    `top: ${e.pageY}px; left:${e.pageX}px;`
+  );
 });
 
 const debounce = (func, wait = 20, immediate = true) => {
@@ -60,7 +56,6 @@ const spin = () => {
   circleTwo.style.transform = `rotate(${window.pageYOffset / 5}deg)`;
 };
 
-
 const nav = document.querySelectorAll('nav a');
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -68,17 +63,25 @@ window.addEventListener('DOMContentLoaded', () => {
     const services = document.querySelector('.about-breakdown');
     debounce(spin());
     if (window.scrollY >= services.offsetTop) {
-      cursor.style.border = '2px solid white';
       nav.forEach(link => {
         link.style.color = 'white';
       });
     } else {
-      cursor.style.border = '2px solid black';
       nav.forEach(link => {
         link.style.color = 'black';
       });
     }
   });
+});
+
+const aboutBreakdown = document.querySelector('.about-breakdown');
+
+aboutBreakdown.addEventListener('mouseover', () => {
+  cursor.classList.add('white');
+});
+
+aboutBreakdown.addEventListener('mouseleave', () => {
+  cursor.classList.remove('white');
 });
 
 // buildsomething
@@ -144,14 +147,14 @@ const linkHover = document.querySelectorAll('a');
 links.forEach(link => {
   link.addEventListener('mouseover', () => {
     cursor.classList.add('animated');
-  })
-})
+  });
+});
 
 links.forEach(link => {
   link.addEventListener('mouseleave', () => {
-    cursor.classList.add('animated');
-  })
-})
+    cursor.classList.remove('animated');
+  });
+});
 
 // footer
 
