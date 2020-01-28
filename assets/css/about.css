@@ -47,6 +47,10 @@ html {
     z-index: 100;
 }
 
+.cursor.white {
+    border: 2px solid white;
+}
+
 .cursor.animated {
     animation: cursor 3000ms infinite linear;
 } 

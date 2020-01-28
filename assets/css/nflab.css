@@ -152,9 +152,32 @@ nav {
     align-items: center;
     color: #F3F3F3;
     position: absolute;
-    right: 50%;
+    right: 45%;
+    top: 35%;
+    cursor: none;
+    padding: 20px;
+}
+
+.back-to-top {
+    font-family: Circular Std;
+    font-size: 16px;
+    align-items: center;
+    color: #F3F3F3;
+    position: absolute;
+    right: 2%;
     top: 50%;
-    pointer-events: auto;
+    cursor: none;
+    padding: 20px;
+}
+
+.back-to-top.hidden {
+    display: none;
+    right: -20%;
+}
+
+.home-link.hidden {
+    display: none;
+    right: -20%;
 }
 
 .nav-line {
@@ -199,7 +222,7 @@ nav {
     width: 60%;
     text-align: left;
     list-style: none;
-    z-index: 2;
+    z-index: 12;
 }
 
 .way-link {
@@ -212,11 +235,11 @@ nav {
     color: #000000;
 }
 
-.way-link.apr {
+.blog-link-list li:nth-child(4) {
     margin-left: 75%;
 }
 
-.way-link.jul, .way-link.aug {
+.blog-link-list li:nth-child(7), .blog-link-list li:nth-child(8) {
     margin-left: 55%;
 }
 
@@ -242,6 +265,7 @@ nav {
     margin: 0 4px;
     position: relative;
 }
+
 
 .box {
     width: 89px;
@@ -282,7 +306,8 @@ article {
     width: 80%;
     margin: 170px auto 150px;
     background-color: white;
-    height: 3878px;
+    height: 100%;
+    padding-bottom: 30px;
 }
 
 .article-details {
@@ -317,6 +342,10 @@ article {
     font-family: Schnyder L Demi;
     font-size: 21px;
     font-weight: 500;
+}
+
+article p {
+    font-family: Schnyder L Demi;
 }
 
 .preview-holder {
