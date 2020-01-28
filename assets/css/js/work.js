@@ -47,15 +47,13 @@ window.addEventListener('DOMContentLoaded', () => {
   const workPreview = document.querySelectorAll('.work-preview');
   workLinks.forEach(link => {
     const num = link.dataset.pic;
-    link.addEventListener('mouseover', event => {
+    link.addEventListener('mouseover', () => {
       cursor.classList.add('animated');
       const preview = workPreview[num];
       preview.classList.add('visible');
       window.addEventListener('mousemove', e => {
         preview.setAttribute('style', `left:${e.pageX}px;`);
       });
-
-      // preview.style.transform = `translateX(${e.pageX}px);`
     });
   });
 
