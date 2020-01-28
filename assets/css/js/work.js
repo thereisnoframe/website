@@ -42,18 +42,6 @@ document.addEventListener('mousemove', e => {
   cursor.setAttribute('style', `top: ${e.pageY}px; left:${e.pageX}px;`);
 });
 
-const images = [
-  'https://www.placecage.com/200/500',
-  'https://baconmockup.com/200/500',
-  'https://www.fillmurray.com/200/500',
-  'https://loremflickr.com/200/500',
-  'https://baconmockup.com/200/500',
-  'https://www.placecage.com/200/500',
-  'https://baconmockup.com/200/500',
-  'https://www.fillmurray.com/200/500',
-  'https://loremflickr.com/200/500',
-  'https://baconmockup.com/200/500',
-];
 window.addEventListener('DOMContentLoaded', () => {
   const workLinks = document.querySelectorAll('.work-link');
   const workPreview = document.querySelectorAll('.work-preview');
@@ -63,7 +51,6 @@ window.addEventListener('DOMContentLoaded', () => {
       cursor.classList.add('animated');
       const preview = workPreview[num];
       preview.classList.add('visible');
-      console.log('do stuff please');
       window.addEventListener('mousemove', e => {
         preview.setAttribute('style', `left:${e.pageX}px;`);
       });
@@ -183,6 +170,20 @@ window.addEventListener('DOMContentLoaded', () => {
         setEventListeners();
         moving = false;
       };
+
+      const buttons = document.querySelectorAll('button');
+
+      buttons.forEach(button => {
+        button.addEventListener('mouseover', () => {
+          cursor.classList.add('animated');
+        });
+      });
+
+      buttons.forEach(button => {
+        button.addEventListener('mouseleave', () => {
+          cursor.classList.remove('animated');
+        });
+      });
 
       initCarousel();
     });

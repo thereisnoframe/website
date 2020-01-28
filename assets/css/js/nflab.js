@@ -42,9 +42,24 @@ window.addEventListener('scroll', () => {
     logo.style.visibility = 'hidden';
     homeLink.innerHTML = '^';
     homeLink.style.fontSize = '50px';
+    homeLink.addEventListener('click', e => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+      });
+    });
   } else if (window.scrollY === 0) {
-    homeLink.style.right = '50%';
+    homeLink.style.right = '50%'; 
     navLine.style.visibility = 'visible';
+    homeLink.removeEventListener('click', e => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+      });
+    });
   } else {
     homeLink.style.left = null;
     homeLink.style.right = '2%';

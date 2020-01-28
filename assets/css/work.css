@@ -222,6 +222,7 @@ nav li {
     display: block;
     animation: image-blur 300ms;
     animation-fill-mode: forwards;
+    z-index: 5;
 }
 
 @keyframes image-blur {
