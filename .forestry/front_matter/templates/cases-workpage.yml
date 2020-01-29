@@ -8,12 +8,18 @@ fields:
 - type: number
   name: data
   label: data
-- type: text
-  name: picture-one
+- name: picture-one
+  type: file
+  config:
+    maxSize: 250
   label: picture-one
-- type: text
-  name: picture-two
+- name: picture-two
+  type: file
+  config:
+    maxSize: 250
   label: picture-two
-- type: text
-  name: picture-three
+- name: picture-three
+  type: file
+  config:
+    maxSize: 250
   label: picture-three
