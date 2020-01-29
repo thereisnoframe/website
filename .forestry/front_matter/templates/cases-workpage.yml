@@ -1,0 +1,19 @@
+---
+label: Cases-workpage
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: number
+  name: data
+  label: data
+- type: text
+  name: picture-one
+  label: picture-one
+- type: text
+  name: picture-two
+  label: picture-two
+- type: text
+  name: picture-three
+  label: picture-three
