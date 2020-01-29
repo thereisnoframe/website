@@ -64,18 +64,19 @@ html {
     }
 }
 
-#loader {
+.loader {
     position: fixed;
     z-index: 99;
     top: 0;
     width: 100vw;
     height: 100vh;
+    background: black;
 }
 
-#loader.hidden {
-    display: none;
+.loader.hidden {
     animation: fadeOut 1s; 
     animation-fill-mode: forwards;
+    pointer-events: none;
 }
 
 @keyframes fadeOut {

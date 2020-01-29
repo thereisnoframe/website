@@ -36,9 +36,9 @@
         </ul>
         <div class="wayfinder-left">
             {% for post in site.nflab reversed%}
-            {% if post.data-number < 6 %}
+            {% if post.position == 'left' %}
             <div class="box-holder">
-            <div class="box"></div>
+            <div class="box" data-box='{{post.data-number}}'></div>
             <img src="{{post.box-picture}}"/>
             </div>
             {%endif%}
@@ -47,9 +47,9 @@
 
             <div class="wayfinder-right">    
                 {% for post in site.nflab reversed%}
-                {% if post.data-number > 6 %}
+                {% if post.position == 'right' %}
                 <div class="box-holder">
-                <div class="box"></div>
+                <div class="box" data-box='{{post.data-number}}'></div>
                 <img src="{{post.box-picture}}"/>
                 </div>
                 {%endif%}

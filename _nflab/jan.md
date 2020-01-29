@@ -4,5 +4,6 @@ id-tag: second
 title: Testing two
 box-picture: https://www.fillmurray.com/400/300
 read-time: 20m
+position: left
 ---
 Hello look at this content its differnt
