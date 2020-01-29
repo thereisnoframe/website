@@ -49,10 +49,14 @@ window.addEventListener('DOMContentLoaded', () => {
     const num = link.dataset.pic;
     link.addEventListener('mouseover', () => {
       cursor.classList.add('animated');
-      const preview = workPreview[num];
-      preview.classList.add('visible');
-      window.addEventListener('mousemove', e => {
-        preview.setAttribute('style', `left:${e.pageX}px;`);
+      workPreview.forEach(img => {
+        if (img.dataset.pic === num) {
+          const preview = img;
+          preview.classList.add('visible');
+          window.addEventListener('mousemove', e => {
+            preview.setAttribute('style', `left:${e.pageX}px;`);
+          });
+        }
       });
     });
   });
@@ -61,8 +65,12 @@ window.addEventListener('DOMContentLoaded', () => {
     const num = link.dataset.pic;
     link.addEventListener('mouseleave', () => {
       cursor.classList.remove('animated');
-      const preview = workPreview[num];
-      preview.classList.remove('visible');
+      workPreview.forEach(img => {
+        if (img.dataset.pic === num) {
+          const preview = img;
+          preview.classList.remove('visible');
+        }
+      });
     });
   });
 

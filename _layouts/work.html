@@ -29,7 +29,7 @@
         {%for example in site.work-examples%}
             <div class="case-holder">
                 <a class="work-link" data-pic="{{example.data}}" href="#">{{example.title}}</a>
-                <img class="work-preview" src="{{example.picture-one}}">
+                <img class="work-preview" data-pic="{{example.data}}" src="{{example.picture-one}}">
             </div>
         {% endfor %}
         </section>
@@ -40,7 +40,7 @@
         </footer>
     </main>
     {%for example in site.work-examples%}
-    <div class="module hidden">
+    <div class="module hidden" data-pic="{{example.data}}">
         <button class="close">X</button>
     <div class="carousel-wrapper">
         <div class="carousel">    
