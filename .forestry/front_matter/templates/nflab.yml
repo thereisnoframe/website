@@ -17,3 +17,8 @@ fields:
 - type: text
   name: read-time
   label: read-time
+- name: position
+  type: text
+  config:
+    required: false
+  label: position
