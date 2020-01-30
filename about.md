@@ -2,8 +2,8 @@
 layout: about
 landing-text: This is how the magic happens
 one: Learn,
-two: Reframe,
-three: Subtract.
+two: Subtract,
+three: Create.
 learn-title: Learn,
 learn-picture: "./assets/css/Images/Canva - Pink Satin Apparel.jpg"
 learn-text: A frame is a perspective from which you look at an issue. Reframing an
