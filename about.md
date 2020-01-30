@@ -10,9 +10,10 @@ learn-text: A frame is a perspective from which you look at an issue. Reframing 
   issue requires changing perspectives
 secret: The secret is in taking apart these frames with the right set of tools.
 reframe-title: Subtract
-reframe-text: A frame is a perspective from which you look at an issue. Reframing
-  an issue requires changing perspectivesA frame is a perspective from which you look
-  at an issue.<br> Design is thinking made visual.
+reframe-text: 'Respect for the environment demands subtraction, not addition—knowing
+  when to stop, not when to shop.
+
+'
 reframe-image: "./assets/css/Images/woman-wearing-white-and-gray-jacket-1070029.jpg"
 create-title: Create
 create-list-one: Information Architecture
