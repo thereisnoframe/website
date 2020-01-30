@@ -46,7 +46,7 @@ window.addEventListener('scroll', () => {
   } else if (window.scrollY === 0) {
     backToTop.classList.add('hidden');
     homeLink.classList.remove('hidden');
-    homeLink.style.right = '50%'; 
+    homeLink.style.right = '50%';
     navLine.style.visibility = 'visible';
   } else {
     homeLink.classList.remove('hidden');
@@ -74,10 +74,15 @@ window.addEventListener('DOMContentLoaded', () => {
   const boxes = document.querySelectorAll('.box');
   blogLinks.forEach(link => {
     link.addEventListener('mouseover', e => {
-      const box = boxes[e.target.dataset.box];
-      link.style.cursor = 'none';
-      box.style.opacity = 0;
-      cursor.classList.add('animated');
+      boxes.forEach(box => {
+        console.log(boxes);
+        if (box.dataset.box === e.target.dataset.box) {
+          const styleBox = box;
+          link.style.cursor = 'none';
+          styleBox.style.opacity = 0;
+          cursor.classList.add('animated');
+        }
+      });
     });
   });
 
