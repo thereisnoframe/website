@@ -25,7 +25,7 @@ create-blurb: A frame is a perspective from which you look at an issue. Reframin
   an issue requires changing perspectivesA frame is a perspective from which you look
   at an issue. Design is thinking made visual.
 something-text-one: something
-something-text-two: spaces
+something-text-two: environments
 something-text-three: technologies
 something-text-four: experiences
 
