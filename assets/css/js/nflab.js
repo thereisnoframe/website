@@ -27,7 +27,7 @@ const cursor = document.querySelector('.cursor');
 const links = document.querySelectorAll('a');
 
 document.addEventListener('mousemove', e => {
-  cursor.setAttribute('style', `top: ${e.pageY}px; left:${e.pageX}px;`);
+  cursor.setAttribute('style', `top: ${e.pageY + 2}px; left:${e.pageX + 2}px;`);
 });
 
 // nav

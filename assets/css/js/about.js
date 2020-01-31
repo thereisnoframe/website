@@ -30,7 +30,7 @@ const links = document.querySelectorAll('a');
 document.addEventListener('mousemove', e => {
   cursor.setAttribute(
     'style',
-    `top: ${e.pageY}px; left:${e.pageX}px;`
+    `top: ${e.pageY + 2}px; left:${e.pageX + 2}px;`
   );
 });
 

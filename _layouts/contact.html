@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Teko:300,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ "/assets/css/contact.css" | relative_url }}">    
     <title>Noframe</title>
 </head>
@@ -24,11 +25,11 @@
             </nav>
     </header>
         <section class="contact-section">
-                <p>We love building things with great people and we love hearing new ideas <span class="email">hello@thereisnoframe.com</span><span class="collaborations"> for collaborations<span></p>
+                <p>{{page.text}} <a href="mailto:hello@thereisnoframe.com" class="email">hello@thereisnoframe.com</a> <span class="collaborations">{{page.collaboration-text}}<span></p>
                     <footer>
-                        <a href="#" class="dribble">Dribble</a>
-                        <a href="#" class="twitter">Twitter</a>
-                        <a href="#"class="behance">Behance</a>
+                        <a href="{{page.footer-link-one-url}}" class="dribble">{{page.footer-link-one}}</a>
+                        <a href="{{page.footer-link-two-url}}" class="twitter">{{page.footer-link-two}}</a>
+                        <a href="{{page.footer-link-three-url}}" class="behance">{{page.footer-link-three}}</a>
                     </footer>
         </section>
         <script src="{{ "/assets/css/js/contact.js" | relative_url }}"></script>

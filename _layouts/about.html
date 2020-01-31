@@ -5,6 +5,7 @@
     <script src="/assets/css/js/p5.js"></script>
     <script src="/assets/css/js/p5.sound.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Teko:300,400&display=swap" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ "/assets/css/about.css" | relative_url }}">   
     <title>Noframe</title>
@@ -39,7 +40,7 @@
         </section>
         
         <div class="scroll-line"></div>
-        <section class="about-breakdown">
+        <section class="about-breakdown" style="background:{{page.background-image}}">
             <div class="learn">
                 <h1><span class="number">1.</span>{{page.learn-title}}</h1>
                 <p>{{page.learn-text}}</p>
@@ -80,7 +81,7 @@
                         <span class="something">{{page.something-text-four}}</span> 
                         <br> 
                         together</h2>
-                    <img src="./assets/css/Images/Canva - Person Wearing Yellow Shoes.jpg" alt="yellow-shoes"/>
+                    <img src="{{page.build-something-image}}" alt="yellow-shoes"/>
                     <div class="build-line-1"></div>
                     <div class="build-line-2"></div>
             </section>
@@ -89,9 +90,9 @@
 
 
         <footer>
-                <a href="#" class="dribble">Dribble</a>
-                <a href="#" class="twitter">Twitter</a>
-                <a href="#"class="behance">Behance</a>
+            <a href="{{page.footer-link-one-url}}" class="dribble">{{page.footer-link-one}}</a>
+            <a href="{{page.footer-link-two-url}}" class="twitter">{{page.footer-link-two}}</a>
+            <a href="{{page.footer-link-three-url}}" class="behance">{{page.footer-link-three}}</a>
         </footer>
 
         <script src="{{ "/assets/css/js/about.js" | relative_url }}"></script>

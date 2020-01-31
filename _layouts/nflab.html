@@ -5,6 +5,7 @@
     <script src="/assets/css/js/p5.js"></script>
     <script src="/assets/css/js/p5.sound.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Teko:300,400&display=swap" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="{{ "/assets/css/nflab.css" | relative_url }}">
     <title>Nf Lab</title>
@@ -12,7 +13,7 @@
 <body>
     <script src="assets/css/js/loader.js"></script>
     <!-- <script src="assets/css/js/sketch.js"></script> -->
-    <main>
+    <main style="background-image: url('{{page.background-image}}');">
     <header>
         <nav>
             <h1 class="logo">Nf Lab</h1>
@@ -59,7 +60,10 @@
         </div>
     </section>
     <section class="place-holder">
-        <div class="place-holder-box"></div>
+        <img class="nf-lab-line" src="assets/css/Images/nflabline.png" alt="vector line"/>
+        <div class="place-holder-box">
+            <img src="{{page.place-holder}}" alt="place-holder"/>
+        </div>
     </section>
         {% for post in site.nflab %}
         <article id="{{post.id-tag}}">
@@ -70,14 +74,16 @@
             <h1 class="article-title">
                 {{post.title}}
             </h1>
-            {{post.content}}
+            <div class="content">
+                {{post.content}}
+            </div>
             </article>
         {% endfor %}
         <footer>
-            <a href="#" class="dribble">Dribble</a>
-            <a href="#" class="twitter">Twitter</a>
-            <a href="#"class="behance">Behance</a>
-    </footer>
+            <a href="{{page.footer-link-one-url}}" class="dribble">{{page.footer-link-one}}</a>
+            <a href="{{page.footer-link-two-url}}" class="twitter">{{page.footer-link-two}}</a>
+            <a href="{{page.footer-link-three-url}}" class="behance">{{page.footer-link-three}}</a>
+        </footer>
     <script src="{{ "/assets/css/js/nflab.js" | relative_url }}"></script>
     </main>
 </body>

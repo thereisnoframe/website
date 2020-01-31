@@ -6,6 +6,7 @@
     <script src="/assets/css/js/p5.sound.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Teko:300,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ "/assets/css/home.css" | relative_url }}">
     
   <title>Noframe</title>
@@ -37,11 +38,11 @@
               <div class="green">green mode<span></span></div>
       </div>
       <section class="main-services">
-          <h3>MAIN SERVICES</h3>
+          <h3>Main services</h3>
           <img src="assets/css/Images/services.gif" alt="main services" class="service-gif"/>
       </section>
       <section class="cases">
-          <h1 class="case-header">SOME CASES</h1>
+          <h1 class="case-header">Some cases</h1>
           {% for case in site.cases %}
           <div class="case">
               <div class="left">
@@ -61,12 +62,12 @@
           <div class="more-line"></div>
       </section>
       <section class="contact-section">
-          <p>We love building things with great people and we love hearing new ideas<br> <span class="email">hello@thereisnoframe.com</span> <span class="collaborations">for collaborations</span></p>
-      </section>
+        <p>{{page.text}} <a href="mailto:hello@thereisnoframe.com" class="email">hello@thereisnoframe.com</a> <span class="collaborations">{{page.collaboration-text}}<span></p>
+        </section>
         <footer>
-            <a href="#" class="dribble">Dribble</a>
-            <a href="#" class="twitter">Twitter</a>
-            <a href="#"class="behance">Behance</a>
+            <a href="{{page.footer-link-one-url}}" class="dribble">{{page.footer-link-one}}</a>
+            <a href="{{page.footer-link-two-url}}" class="twitter">{{page.footer-link-two}}</a>
+            <a href="{{page.footer-link-three-url}}" class="behance">{{page.footer-link-three}}</a>
         </footer>
     </main>
     <script src="{{ "/assets/css/js/main.js" | relative_url }}"></script>

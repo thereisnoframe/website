@@ -118,7 +118,6 @@ html {
 }
 
 main {
-    background-image: url('./Images/labbg.png');
     height: 100%;
     width: 100vw;
     background-size: contain;
@@ -150,7 +149,7 @@ nav {
 }
 
 .home-link {
-    font-family: Circular Std;
+    font-family: 'Teko', light;
     font-size: 16px;
     align-items: center;
     color: #F3F3F3;
@@ -162,7 +161,7 @@ nav {
 }
 
 .back-to-top {
-    font-family: Circular Std;
+    font-family: 'Teko', light;
     font-size: 16px;
     align-items: center;
     color: #F3F3F3;
@@ -204,7 +203,7 @@ nav {
     height: 23px;
     right: -8%;
     top: 50%;
-    font-family: Berthold;
+    font-family: font-family: 'Teko', light;
     font-size: 20px;
     color: #F3F3F3;
     transform: rotate(90deg);
@@ -303,6 +302,16 @@ nav {
     top: 20%;
 }
 
+.place-holder-box img {
+    height: 100%;
+    width: 100%;
+}
+
+.nf-lab-line {
+    position: absolute;
+    width: 31%;
+    left: 10%;
+}
 /* article */
 
 article {
@@ -322,7 +331,7 @@ article {
 }
 
 .article-details span {
-    font-family: Berthold;
+    font-family: font-family: 'Teko', light;
     font-weight: 500;
     font-size: 20px;
     color: #000000;
@@ -337,6 +346,11 @@ article {
     font-family: Schnyder S Demi;
     font-size: 60px;
     width: 90%;
+}
+
+.content {
+    width: 85%;
+    margin: 0 auto;
 }
 
 .paragraph-one {

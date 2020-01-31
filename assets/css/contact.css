@@ -80,7 +80,9 @@ nav {
 nav a {
     display: block;
     font-size: 36px;
-    font-family: Circular Std;
+    font-family: 'Circular Std', Book;
+    font-style: normal;
+    font-weight: normal;
     text-decoration: none;
     color: black;
     cursor: none;
@@ -143,7 +145,8 @@ a.green-mode {
     position: absolute;
     top: 30px;
     font-size: 16px;
-    font-family: Berthold;
+    font-family: 'Teko', light;
+    text-align: center;
 }
 
 /* status bar */
@@ -211,10 +214,11 @@ a.green-mode {
 .email {
     color: #BDF166;
     border-bottom: 4px solid #BDF166;
+    text-decoration: none;
 }
 
 .collaborations {
-    font-family: Berthold;
+    font-family: 'Teko', light;
     font-style: normal;
     font-weight: bold;
     font-size: 92px;
