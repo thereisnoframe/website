@@ -1,5 +1,6 @@
 ---
 layout: about
+background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.77), rgba(0, 0, 0, 0.77)), url('./assets/css/Images/Canva\ -\ The\ Unsplash\ Book\ on\ Brown\ Wooden\ Cube\ Table.jpg');
 landing-text: This is how the magic happens
 one: Learn,
 two: Reframe,
@@ -18,8 +19,15 @@ create-list-three: Interaction
 create-list-four: Development
 create-list-five: Testing
 create-blurb: A frame is a perspective from which you look at an issue. Reframing an issue requires changing perspectivesA frame is a perspective from which you look at an issue. Design is thinking made visual.
+build-something-image: ./assets/css/Images/Canva - Person Wearing Yellow Shoes.jpg
 something-text-one: something
 something-text-two: substance
 something-text-three: existent
 something-text-four: commodity
+footer-link-one: Dribble
+footer-link-one-url: #
+footer-link-two: Twitter
+footer-link-two-url: #
+footer-link-three: Behance
+footer-link-three-url: #
 ---

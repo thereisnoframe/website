@@ -18,7 +18,7 @@ html {
 }
 
 @font-face {
-    font-family: Berthold;
+    font-family: Berthold Akzidenz Grotesk BE;
     src: url('./fonts/Berthold-Akzidenz-Grotesk-BE-Regular.otf');
 }
 
@@ -120,7 +120,9 @@ nav {
 nav a {
     display: block;
     font-size: 36px;
-    font-family: Circular Std;
+    font-family: 'Circular Std', Book;
+    font-style: normal;
+    font-weight: normal;
     text-decoration: none;
     color: black;
     cursor: none;
@@ -175,7 +177,7 @@ nav li {
     position: absolute;
     top: 30px;
     font-size: 16px;
-    font-family: Berthold;
+    font-family: 'Teko', light;
 }
 
 
@@ -209,12 +211,14 @@ nav li {
 
 .number {
     color: #BDF166;
-    font-family: Berthold;
+    font-family: Berthold Akzidenz Grotesk BE;
     font-size: 40px;
+    font-style: normal;
+    font-weight: normal;
 }
 
 .scroll {
-    font-family: Berthold;
+    font-family: Berthold Akzidenz Grotesk BE;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -239,7 +243,6 @@ nav li {
 .about-breakdown {
     width: 100%;
     height: 4500px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.77), rgba(0, 0, 0, 0.77)), url('./Images/Canva\ -\ The\ Unsplash\ Book\ on\ Brown\ Wooden\ Cube\ Table.jpg');
     background-size: cover;
     background-repeat: round;
     display: block;
@@ -254,7 +257,7 @@ nav li {
 }
 
 .about-breakdown p {
-    font-family: Schnyder S;
+    font-family: Schnyder S Demi;
     font-style: normal;
     font-weight: 500;
     font-size: 21px;
@@ -330,7 +333,7 @@ nav li {
     font-size: 60px;
     width: 648px;
     height: 434px;
-    font-family: Schnyder S;
+    font-family: Schnyder S Demi;
     text-align: center;
     color: #F3F3F3;
     display: block;
@@ -426,7 +429,7 @@ br {
 }
 
 .create ul {
-    font-family: Schnyder S;
+    font-family: Schnyder S Demi;
     font-style: normal;
     font-weight: 500;
     font-size: 30px;
@@ -490,7 +493,7 @@ br {
     height: 210px;
     width: 490px;
     margin: 260px auto 0;
-    font-family: Schnyder S;
+    font-family: Schnyder S Demi;
     font-style: normal;
     font-weight: 500;
     font-size: 60px;

@@ -39,7 +39,7 @@ links.forEach(link => {
 });
 
 document.addEventListener('mousemove', e => {
-  cursor.setAttribute('style', `top: ${e.pageY}px; left:${e.pageX}px;`);
+  cursor.setAttribute('style', `top: ${e.pageY + 2}px; left:${e.pageX + 2}px;`);
 });
 
 window.addEventListener('DOMContentLoaded', () => {
