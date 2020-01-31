@@ -19,7 +19,7 @@ create-list-one: Information Architecture
 create-list-two: Immersive interaction
 create-list-three: Interaction
 create-list-four: Development
-create-list-five: Testing
+create-list-five: Exhibition
 create-blurb: A frame is a perspective from which you look at an issue. Reframing an issue requires changing perspectivesA frame is a perspective from which you look at an issue. Design is thinking made visual.
 build-something-image: ./assets/css/Images/Canva - Person Wearing Yellow Shoes.jpg
 something-text-one: something
@@ -27,11 +27,10 @@ something-text-two: substance
 something-text-three: existent
 something-text-four: commodity
 footer-link-one: Dribble
-footer-link-one-url: #
+footer-link-one-url: #'
 footer-link-two: Twitter
-footer-link-two-url: #
+footer-link-two-url: '#'
 footer-link-three: Behance
-footer-link-three-url: 
-create-list-five: Exhibition
+footer-link-three-url: '#'
 ---
 
