@@ -1,0 +1,25 @@
+---
+label: Cases-workpage
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: number
+  name: data
+  label: data
+- name: picture-one
+  type: file
+  config:
+    maxSize: 250
+  label: picture-one
+- name: picture-two
+  type: file
+  config:
+    maxSize: 250
+  label: picture-two
+- name: picture-three
+  type: file
+  config:
+    maxSize: 250
+  label: picture-three

@@ -1,0 +1,24 @@
+---
+label: NfLab
+hide_body: false
+fields:
+- type: number
+  name: data-number
+  label: data-number
+- type: text
+  name: id-tag
+  label: id-tag
+- type: text
+  name: title
+  label: title
+- type: text
+  name: box-picture
+  label: box-picture
+- type: text
+  name: read-time
+  label: read-time
+- name: position
+  type: text
+  config:
+    required: false
+  label: position

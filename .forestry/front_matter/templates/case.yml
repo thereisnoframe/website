@@ -1,0 +1,19 @@
+---
+label: Case-Homepage
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: sub-title
+  label: sub-title
+- type: textarea
+  name: blurb
+  label: blurb
+- type: file
+  name: left-img
+  label: left-img
+- type: file
+  name: right-img
+  label: right-img
