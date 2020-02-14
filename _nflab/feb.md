@@ -1,10 +1,10 @@
 ---
 data-number: "1"
 id-tag: test
-title: Testing
-box-picture: https://www.fillmurray.com/200/500
+title: Spec
+box-picture: ''
 read-time: 5m
-position: right
+position: Left
 
 ---
 Hello look at this content
