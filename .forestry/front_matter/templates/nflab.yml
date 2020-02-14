@@ -22,3 +22,5 @@ fields:
   config:
     required: false
   label: position
+pages:
+- _nflab/living-objects-the-substitute.md
