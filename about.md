@@ -9,15 +9,14 @@ three: Create.
 learn-title: Learn
 learn-picture: "./assets/css/Images/title-bg.gif"
 learn-text: A frame is a perspective from which you look at an issue. Reframing an
-  issue requires changing perspectives
+  issue requires changing perspectives.
 secret: The secret is in taking apart these frames with the right set of tools.
 reframe-title: Subtract
-reframe-text: Respect for the environment demands subtraction, not addition—knowing
-  when to stop, not when to shop.
+reframe-text: Respect for the environment demands subtraction, not addition.
 reframe-image: "./assets/css/Images/woman-wearing-white-and-gray-jacket-1070029.jpg"
 create-title: Create
 create-list-one: Information Architecture
-create-list-two: Immersive interaction
+create-list-two: Immersive Interaction
 create-list-three: Interaction
 create-list-four: Development
 create-list-five: Exhibition
