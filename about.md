@@ -8,18 +8,20 @@ two: Subtract,
 three: Create.
 learn-title: Learn
 learn-picture: "./assets/css/Images/title-bg.gif"
-learn-text: A frame is a perspective from which you look at an issue. Reframing an
-  issue requires changing perspectives.
+learn-text: Noframe is a global collective of video artists, interaction designers
+  and future thinkers. We collaborate with brands and institutions to develop video
+  artworks and immersive installations, to illuminate iconic architecture, and to
+  produce major launch events.
 secret: The secret is in taking apart these frames with the right set of tools.
 reframe-title: Subtract
 reframe-text: Respect for the environment demands subtraction, not addition.
 reframe-image: "./assets/css/Images/woman-wearing-white-and-gray-jacket-1070029.jpg"
 create-title: Create
-create-list-one: Interaction Design
-create-list-two: Immersive Installations
+create-list-one: Interaction Architecture
+create-list-two: Design
 create-list-three: Prototyping
 create-list-four: Exhibition
-create-list-five: ''
+create-list-five: Immersive Installations
 create-blurb: A frame is a perspective from which you look at an issue. Reframing
   an issue requires changing perspectivesA frame is a perspective from which you look
   at an issue. Design is thinking made visual.
