@@ -1,7 +1,7 @@
 ---
-data-number: "1"
+data-number: "3"
 id-tag: test
-title: Spec
+title: 'Speculating the Future of Cities '
 box-picture: ''
 read-time: 5m
 position: Left
