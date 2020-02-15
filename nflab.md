@@ -1,6 +1,6 @@
 ---
 layout: nflab
-background-image: assets/css/Images/nflab_bg-01.png
+background-image: assets/css/Images/andreas-schantl-no1WWOo0gkk-unsplash.jpg
 animation: assets/css/Images/lab-home-pic.png
 animation-text: df
 place-holder: assets/css/Images/lab-home-pic.png
