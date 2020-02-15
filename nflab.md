@@ -1,6 +1,6 @@
 ---
 layout: nflab
-background-image: 'assets/css/Images/f903f592edbfe7f8712beed9b1f3e45c.gif
+background-image: 'assets/css/Images/nflab_bg-01.png
 
 '
 animation: assets/css/Images/lab-home-pic.png
