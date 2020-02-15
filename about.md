@@ -1,7 +1,7 @@
 ---
 layout: about
 background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.77), rgba(0, 0, 0, 0.77)),
-  url('./assets/css/Images/andreas-schantl-no1WWOo0gkk-unsplash.jpg');
+  url('./assets/css/Images/nflab_bg-01.png');
 landing-text: This is how the magic happens
 one: Learn,
 two: Subtract,
