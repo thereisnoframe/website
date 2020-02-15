@@ -1,8 +1,6 @@
 ---
 layout: nflab
-background-image: 'assets/css/Images/nflab_bg-01.png
-
-'
+background-image: assets/css/Images/nflab_bg-01.png
 animation: assets/css/Images/lab-home-pic.png
 animation-text: 'Ref: alt text Ref: alt text Ref: alt text Ref: alt text.'
 place-holder: assets/css/Images/lab-home-pic.png
