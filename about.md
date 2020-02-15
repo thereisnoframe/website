@@ -25,9 +25,9 @@ create-blurb: A frame is a perspective from which you look at an issue. Reframin
   at an issue. Design is thinking made visual.
 build-something-image: "./assets/css/Images/Canva - Person Wearing Yellow Shoes.jpg"
 something-text-one: something
-something-text-two: substance
-something-text-three: existent
-something-text-four: commodity
+something-text-two: experience
+something-text-three: product
+something-text-four: art
 footer-link-one: Dribble
 footer-link-one-url: 
 footer-link-two: Twitter
