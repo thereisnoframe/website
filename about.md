@@ -15,9 +15,9 @@ reframe-title: Subtract
 reframe-text: Respect for the environment demands subtraction, not addition.
 reframe-image: "./assets/css/Images/woman-wearing-white-and-gray-jacket-1070029.jpg"
 create-title: Create
-create-list-one: Interaction Architecture
-create-list-two: Immersive Interaction
-create-list-three: Development
+create-list-one: Interaction Design
+create-list-two: Immersive Installations
+create-list-three: Prototyping
 create-list-four: Exhibition
 create-list-five: ''
 create-blurb: A frame is a perspective from which you look at an issue. Reframing
