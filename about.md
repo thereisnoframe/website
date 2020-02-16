@@ -16,8 +16,8 @@ reframe-title: Subtract
 reframe-text: Respect for the environment demands subtraction, not addition.
 reframe-image: "./assets/css/Images/woman-wearing-white-and-gray-jacket-1070029.jpg"
 create-title: Create
-create-list-one: Interaction Architecture
-create-list-two: Design
+create-list-one: Interaction Design
+create-list-two: Experience Design
 create-list-three: Prototyping
 create-list-four: Exhibition
 create-list-five: Immersive Installations
