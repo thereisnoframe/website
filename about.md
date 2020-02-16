@@ -1,7 +1,6 @@
 ---
 layout: about
-background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0.22)),
-  url('./assets/css/Images/nflab_bg-01.png');
+background-image: " url('./assets/css/Images/nflab_bg-01.png');"
 landing-text: This is how the magic happens
 one: Learn,
 two: Subtract,
