@@ -2,7 +2,7 @@
 data-number: 2
 id-tag: ''
 title: L.U.C.A.
-box-picture: ''
+box-picture: 2.1-1.png
 read-time: 5m
 position: left
 
