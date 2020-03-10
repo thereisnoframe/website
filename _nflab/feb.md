@@ -1,8 +1,8 @@
 ---
-data-number: "3"
+data-number: "1"
 id-tag: test
-title: 'Speculating the Future of Cities '
-box-picture: ''
+title: Endangered Species Museum
+box-picture: lab-home-pic.png
 read-time: 5m
 position: Left
 
